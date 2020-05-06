@@ -9,7 +9,7 @@ import Services from "../components/Home/Services"
 
 export default () => (
   <Layout>
-    {/*<Hero>
+    <Hero>
       <Banner
         title="Chedra Tax"
         info="
@@ -21,7 +21,7 @@ export default () => (
           Citeste mai mult
         </Link>
       </Banner>
-    </Hero> */}
+    </Hero>
     <About />
     <Services />
   </Layout>
