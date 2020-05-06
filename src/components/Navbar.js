@@ -79,7 +79,13 @@ const Navbar = () => {
         </div>
         <div className={styles.menuToggle}>
           <IconContext.Provider
-            value={{ style: { color: "white", verticalAlign: "middle" } }}
+            value={{
+              style: {
+                color: "white",
+                verticalAlign: "middle",
+                fontSize: "2rem",
+              },
+            }}
           >
             <div>
               <FaBars onClick={() => setIsOpen(true)} />
@@ -97,7 +103,7 @@ const Navbar = () => {
               style: {
                 color: "white",
                 verticalAlign: "middle",
-                fontSize: "3rem",
+                fontSize: "2rem",
                 float: "right",
                 cursor: "pointer",
               },

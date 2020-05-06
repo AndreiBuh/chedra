@@ -44,7 +44,7 @@ a {
   text-decoration: none;
 }
 .defaultHero {
-  min-height: calc(80vh - 62px);
+  min-height: calc(60vh - 62px);
   background: linear-gradient(rgba(201, 39, 37, 0.4), rgba(0, 0, 0, 0.4)),
     url("../images/defaultBcg1.jpeg") center/cover no-repeat;
   display: flex;
@@ -83,4 +83,10 @@ main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (min-width: 992px) {
+  .defaultHero {
+    min-height: calc(80vh - 62px);
+  }
 }
