@@ -1,6 +1,6 @@
 .nav-center {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
@@ -9,9 +9,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.25rem;
+  padding: 1rem 1.25rem 0.5rem;
 }
 
+.logo {
+  height: 50px;
+}
 .nav-header {
   display: flex;
   justify-content: space-between;
@@ -23,7 +26,6 @@
 .phone-header, .timer-header {
   display: flex;
   flex-direction: row;
-  padding: 5px;
   justify-content: center;
   align-items: center;
 }
@@ -163,6 +165,9 @@
     align-items: center;
   }
 
+  .logo {
+    height: 78px;
+  }
 
   .phone-header, .timer-header {
     display: flex;
