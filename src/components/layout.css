@@ -42,6 +42,7 @@ p {
 }
 a {
   text-decoration: none;
+  color: (var(--mainBlack));
 }
 .defaultHero {
   min-height: 50vh;
@@ -57,7 +58,7 @@ a {
   letter-spacing: var(--mainSpacing);
   color: var(--mainWhite);
   border: 2px solid var(--mainWhite);
-  padding: 0.9rem 1.6rem;
+  padding: 0.6rem 1.2rem;
   display: inline-block;
   transition: var(--mainTransition);
   cursor: pointer;

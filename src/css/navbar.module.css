@@ -1,3 +1,4 @@
+
 .nav-center {
   display: flex;
   flex-direction: column;
@@ -13,7 +14,7 @@
 }
 
 .logo {
-  height: 50px;
+  height: 60px;
 }
 .nav-header {
   display: flex;
@@ -122,6 +123,10 @@
   flex-direction: row;
 }
 
+.navbar-span {
+  font-size: 13px;
+}
+
 @media screen and (min-width: 992px) {
   .nav-header {
     justify-content: space-evenly;
@@ -211,5 +216,9 @@
 
   .menu-toggle {
     display: none;
+  }
+
+  .navBarSpan {
+    font-size: 15px;
   }
 }

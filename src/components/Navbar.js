@@ -26,19 +26,23 @@ const Navbar = () => {
           <div className={styles.phoneHeader}>
             <img src={phone} alt="phone" />
             <div className={styles.phoneHeaderDetails}>
-              <span>
+              <span className={styles.navbarSpan}>
                 <strong>Telefon</strong>
               </span>
-              <span>+40 754 689 944</span>
+              <a href="tel:0754-689-944">
+                <span className={styles.navbarSpan}>0754-689-944</span>
+              </a>
             </div>
           </div>
           <div className={styles.timerHeader}>
             <img src={timer} alt="timer" />
             <div className={styles.timerHeaderDetails}>
-              <span>
+              <span className={styles.navbarSpan}>
                 <strong>Program</strong>
               </span>
-              <span>Luni - Sambata 9.00 - 19.00</span>
+              <span className={styles.navbarSpan}>
+                Luni - Sambata 9.00 - 19.00
+              </span>
             </div>
           </div>
         </div>

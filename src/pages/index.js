@@ -10,7 +10,7 @@ import Services from "../components/Home/Services"
 export default () => (
   <Layout>
     <Hero>
-      <Banner title="Chedra Tax" info="Welcome to our Travel English">
+      <Banner info="Welcome to our Travel English">
         <Link to="/" className="btn-white">
           Citeste mai mult
         </Link>
