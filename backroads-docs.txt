@@ -1,0 +1,82 @@
+=========================== BACKROADS ====================
+
+
+
+-----------------1. Setup Backroads Travel project---------------
+
+-> npx gatsby new backroads https://github.com/gatsbyjs/gatsby-starter-hello-world.git   ->  Starter hello-world
+-> cd backroads
+-> gatsby develop
+
+-> gatsby build -> production ready app -> public folder
+-> gatsby serve -> serve our production app on a local server
+
+.cache -> automatic generated -> Gatsby stores the cache and uses it
+static -> you could save your assets here(images, css) -> it is ignored by webpack, so we will not use it so much
+
+Use VSCode extension Prettier, it's better and more easier to work with than using prettier npm package -> you need to run npm run format
+
+-----------------2. Pages & Navigation----------------
+
+-> <Link to="/">
+-> <Layout> component -> contains components that you render in every page(Navbar, Footer)
+-> Layout component is very important -> we can attach global css here, or bootstrap !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+---------------------3. Styling-------------------------
+
+-> inline css(style={{}}), global css(layout.css), component css
+-> css modules -> Gatsby comes out of the box with css modules -> unique classes -> navbar.module.css -> scoped css to the component where is imported
+-> styled-components  ->  background-image plugin uses styled-components
+-> sass   -> add plugin, modify gatsby-config.js  -> yarn add node-sass gatsby-plugin-sass ->  then gatsby-config.js configure
+-> bootstrap -> npm install --save bootstrap -> import 'bootstrap/dist/css/bootstrap.min.css' into layout.js
+-> tailwindCSS
+
+-----------------------4.Icons-----------------------
+
+-> npm install --save react-icons
+
+------------------------5. Constants folder-------------------
+
+-> navlinks
+
+------------------------6. Navbar------------------------------
+
+-> css folder in src
+
+-------------------------7. Footer-------------------------------
+-> Footer.js
+-> margin-top: auto -> to get at the bottom
+
+-------------------------8. Hero--------------------------
+-> Hero.js
+
+-------------------------9. Error page------------------------
+-> 404.js
+
+--------------------------10. Styled components----------------
+
+-> install gatsby-plugin-styled-components
+-> npm install --save gatsby-plugin-styled-components styled-components babel-plugin-styled-components
+-> edit gatsby-config.js
+
+-> gatbsy-background-image plugin -> is using styled-components -> optimized image
+
+
+-------------------------11. Hosting--------------------------
+Netlify
+-> Drag & drop (public folder after gatsby build command)
+    -> Cons: too many steps
+
+-> Continuous deployment(git & github account)
+    -> git installed
+    -> github account
+    -> git init
+    -> configure .gitignore
+    -> git add .
+    -> git commit -m "message"
+    -> git remote  -> connect to remote repo
+    -> git push -u origin master
+
+
+
+----------------------- 12. GraphQL ------------------------
