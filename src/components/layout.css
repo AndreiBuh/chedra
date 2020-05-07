@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Poppins");
 
 :root {
-  --primaryColor: #c92725;
+  --primaryColor: #fb4848;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --navbarColor: #2e333a;
@@ -10,7 +10,7 @@
   --darkGrey: #afafaf;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 4px;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --lightShadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -33,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
 }

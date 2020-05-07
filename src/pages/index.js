@@ -6,6 +6,8 @@ import Hero from "../components/Hero"
 import Banner from "../components/Banner"
 import About from "../components/Home/About"
 import Services from "../components/Home/Services"
+import Count from "../components/Home/Count"
+import Gallery from "../components/Home/Gallery"
 
 export default () => (
   <Layout>
@@ -17,6 +19,8 @@ export default () => (
       </Banner>
     </Hero>
     <About />
+    <Gallery />
     <Services />
+    <Count />
   </Layout>
 )

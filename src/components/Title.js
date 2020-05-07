@@ -2,31 +2,46 @@ import React from "react"
 
 import styled from "styled-components"
 
-const Title = ({ title, subtitle, className }) => {
+const Title = ({ title, subtitle, className, titleColor }) => {
   return (
     <div className={className}>
       <h4>
-        <span className="title">{title}</span>
+        <span className={titleColor}>{title}</span>
         <span>{subtitle}</span>
       </h4>
+      <span className="title-separator"></span>
     </div>
   )
 }
 
 export default styled(Title)`
-  text-transform: uppercase;
-  font-size: 2.3rem;
+  text-transform: capitalize;
+  font-size: 36px;
+  line-height: 40px;
   margin-bottom: 2rem;
   h4 {
     text-align: center;
-    letter-spacing: 7px;
+    letter-spacing: 2px;
     color: var(--primaryColor);
   }
-  .title {
+  .title-black {
     color: var(--mainBlack);
+  }
+
+  .title-white {
+    color: #fff;
   }
   span {
     display: block;
+  }
+
+  .title-separator {
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 45px;
+    background-color: var(--primaryColor);
+    margin: 0 auto;
   }
   @media (min-width: 576px) {
     span {

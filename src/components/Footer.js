@@ -13,8 +13,8 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.backToTop}>
         <a href="#navbar" style={{ color: "white", fontSize: "1.7rem" }}>
-          <IconContext.Provider value={{ style: { verticalAlign: "middle" } }}>
-            <div>
+          <IconContext.Provider value={{ style: { verticalAlign: "bottom" } }}>
+            <div style={{ padding: "10px" }}>
               <FaChevronUp />
             </div>
           </IconContext.Provider>

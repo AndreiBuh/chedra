@@ -8,12 +8,12 @@ import styles from "../../css/services.module.css"
 const Services = () => {
   return (
     <section className={styles.services}>
-      <Title title="serviciile" subtitle="noastre" />
+      <Title title="serviciile" subtitle="noastre" titleColor="title-black" />
       <div className={styles.center}>
         {services.map((item, index) => {
           return (
             <article key={index} className={styles.service}>
-              <span>{item.icon}</span>
+              <img src={item.icon} className={styles.svgImage} />
               <h4>{item.title}</h4>
               <p>{item.text}</p>
             </article>

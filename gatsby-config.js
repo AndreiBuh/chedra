@@ -5,6 +5,10 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: "Chedra Tax",
+    description: "Inspectie tehnica periodica",
+    author: "Andrei Buhus",
+  },
   plugins: [`gatsby-plugin-sass`, `gatsby-plugin-styled-components`],
 }

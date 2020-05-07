@@ -8,14 +8,18 @@
 
 }
 .back-to-top {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   background-color: var(--mainBlack);
   position: absolute;
-  top: -2.5rem;
+  top: -2rem;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
+}
+
+.back-to-top div svg {
+  animation: up 2s infinite;
 }
 
 .links a {
@@ -46,4 +50,18 @@
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
   line-height: 2;
+}
+
+@keyframes up {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
 }

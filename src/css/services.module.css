@@ -23,3 +23,7 @@
 .service h4 {
   text-transform: uppercase;
 }
+
+.svg-image {
+  width: 80px;
+}

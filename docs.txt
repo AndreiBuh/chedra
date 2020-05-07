@@ -80,3 +80,12 @@ Netlify
 
 
 ----------------------- 12. GraphQL ------------------------
+
+-> loading data into react components using GraphQL
+-> graphiQL ->  GraphQL ignored
+-> localhost:8000/___graphql
+-> <StaticQuery> -> can be used in any component including pages
+-> <PageQuery> -> can be used only in the page component
+
+-----SiteMetaData-----
+-> information about the site -> in gatsby-config.js
