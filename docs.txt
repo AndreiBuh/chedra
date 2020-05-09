@@ -85,7 +85,98 @@ Netlify
 -> graphiQL ->  GraphQL ignored
 -> localhost:8000/___graphql
 -> <StaticQuery> -> can be used in any component including pages
--> <PageQuery> -> can be used only in the page component
+-> <PageQuery> -> can be used only in the page component(pages)
+-> useStaticQuery()
 
 -----SiteMetaData-----
 -> information about the site -> in gatsby-config.js
+
+----------------------13. gatsby-source-filesystem  plugin ----------------
+
+-> A Gatsby source plugin for sourcing data into your Gatsby application from your local filesystem.
+-> yarn add gatsby-source-filesystem
+-> once the plugin is installed we have access to 2 fields: allFile & file
+
+allFile
+ -> returns all files
+-> nodes !
+-> arguments -> filter the result -> filter, limit, skip, sort
+
+file
+-> returns one file
+-> arguments
+
+-----------------------14. gatsby-plugin-react-helmet -----------------------
+
+----------------------15.  gatsby-image  plugin ----------------------
+
+-> optimize images
+-> yarn add gatsby-image gatsby-transformer-sharp gatsby-plugin-sharp
+-> plugins: [`gatsby-transformer-sharp`, `gatsby-plugin-sharp`]  in gatsby-config.js
+-> <Img fixed/fluid={} />
+
+-----------------16. Query images with gatsby-image-----------------
+
+-> childImageSharp
+-> Gatsby creates multiple sizes for the same image out of the box
+-> maxWidth -> by default is 800 -> controls how gatsby generates the images -> doesn't control the actual width
+-> the width for fluid images is controlled by parent container
+
+------------------17. background-image-plugin-------------------
+
+-> yarn add gatsby-background-image
+-> nothing to add in gatsby-config.js
+
+-> Problem with opacity ->  opacity: 1!important to fix the gradient display on top of the image
+
+------------------18. transition-plugin-transition-link   for Page Transition ------------------------
+
+-> LINK no transition animation vs AniLink or TransitionLink
+-> transition page
+-> yarn add gatsby-plugin-transition-link
+-> configure in gatsby-config.js -> `gatsby-plugin-transition-link`
+-> install another package -> yarn add gsap  -> AniLink
+-> transform Link -> AniLink in Navbar.js -> <AniLink fade to="" />
+
+-> AniLink -> fade, paintDrip, swipe, cover
+
+
+---------------------19. Formspree -------------------------------------------------
+
+-> connect your form to our endpoint and we'll email you the submission
+
+
+-----------------20. External data - Headless CMS------------------------------------
+
+-> headlesscms.origin
+-> store and deliver data to the frontend
+
+-----------------21. Contenful--------------
+
+-> straightforward interface
+-> easy overall Setup
+-> plays very well with Netlify, our hosting provider
+-> content model -> add content type -> add fields
+-> API key SDK
+
+Connect to contentful -> yarn add gatsby-source-contentful & configure in gatsby-config.js
+
+Env variables -> yarn add dotenv -> more secure
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+-> .env.development
+-> netlify -> site settings -> build & deploy -> environment variables
+
+
+------------------------22. Prisma playground vs. graphiQL -----------------------
+
+-> prisma playground vs graphiQL -> localhost:8000/___playground vs localhost:8000/___graphql
+-> we write queries the same, it does affect only the interface where we write queries
+-> let you create tabs
+-> Docs is better
+
+->Install Prisma GraphQL playground -> yarn add gatsby-plugin-playground
+-> add `gatsby-plugin-playground` in gatsby-config.js

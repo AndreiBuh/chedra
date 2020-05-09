@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { IconContext } from "react-icons"
 import { FaBars, FaTimes, FaPlus } from "react-icons/fa"
-import { Link } from "gatsby"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import socialIcons from "../constants/social-icons"
 
 import links from "../constants/links"
@@ -18,9 +18,9 @@ const Navbar = () => {
     <>
       <div className={styles.navCenter} id="navbar">
         <div className={styles.logoHeader}>
-          <Link to="/">
+          <AniLink fade to="/">
             <img src={logo} alt="logo" className={styles.logo} />
-          </Link>
+          </AniLink>
         </div>
         <div className={styles.headerDetails}>
           <div className={styles.phoneHeader}>
@@ -58,7 +58,9 @@ const Navbar = () => {
           {links.map((link, index) => {
             return (
               <li key={index}>
-                <Link to={link.path}>{link.text}</Link>
+                <AniLink fade to={link.path}>
+                  {link.text}
+                </AniLink>
               </li>
             )
           })}
@@ -122,9 +124,9 @@ const Navbar = () => {
               <li key={index} className={styles.navItem}>
                 <div className={styles.navSpan}>
                   <div>
-                    <Link to={link.path} className={styles.navLink}>
+                    <AniLink fade to={link.path} className={styles.navLink}>
                       {link.text}
-                    </Link>
+                    </AniLink>
                   </div>
                   <div>
                     <IconContext.Provider

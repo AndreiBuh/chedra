@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import { animateScroll as scroll } from "react-scroll"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { IconContext } from "react-icons"
 import { FaChevronUp } from "react-icons/fa"
 
@@ -8,11 +9,19 @@ import socialIcons from "../constants/social-icons"
 
 import styles from "../css/footer.module.css"
 
+const scrollToTop = () => {
+  scroll.scrollToTop()
+}
+
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.backToTop}>
-        <a href="#navbar" style={{ color: "white", fontSize: "1.7rem" }}>
+        <a
+          href="javascript:void(0)"
+          onClick={scrollToTop}
+          style={{ color: "white", fontSize: "1.7rem" }}
+        >
           <IconContext.Provider value={{ style: { verticalAlign: "bottom" } }}>
             <div style={{ padding: "10px" }}>
               <FaChevronUp />
@@ -23,9 +32,9 @@ const Footer = () => {
       <div className={styles.links}>
         {links.map((item, index) => {
           return (
-            <Link key={index} to={item.path}>
+            <AniLink fade key={index} to={item.path}>
               {item.text}
-            </Link>
+            </AniLink>
           )
         })}
       </div>

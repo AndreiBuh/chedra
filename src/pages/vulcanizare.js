@@ -1,16 +1,26 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
+import StyledHero from "../components/StyledHero"
 
-const vulcanizare = () => {
+export default ({ data }) => {
   return (
     <Layout>
-      <p>
-        vulcanizare page <Link to="/">Home page</Link>
-      </p>
+      <StyledHero image={data.heroImage.childImageSharp.fluid}></StyledHero>
     </Layout>
   )
 }
 
-export default vulcanizare
+//Page Query
+export const query = graphql`
+  {
+    heroImage: file(relativePath: { eq: "defaultBcg1.jpeg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`

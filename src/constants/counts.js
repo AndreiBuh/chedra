@@ -8,7 +8,7 @@ export default [
   {
     icon: signs,
     number: 3,
-    text: "Sedii ITP",
+    text: "Puncte de lucru ITP",
   },
   {
     icon: symbol,
