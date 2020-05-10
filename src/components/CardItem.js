@@ -30,11 +30,11 @@ const CardItem = ({ location }) => {
               <span className={styles.card__value}>Da</span>
               <span className={styles.card__text}>Vulcanizare</span>
             </li>
-            <li className={styles.card__item}>
+            {/*<li className={styles.card__item}>
               <FaPhone />
               <span className={styles.card__value}>0754689944</span>
               <span className={styles.card__text}>Telefon</span>
-            </li>
+  </li>*/}
           </ul>
           <p className={styles.card__paragraph}>{location.description}</p>
           <AniLink fade to="/contact">

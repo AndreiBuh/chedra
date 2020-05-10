@@ -61,7 +61,7 @@ const Team = () => {
   } = useStaticQuery(getInspectors)
   return (
     <section className={styles.team}>
-      <Title title="echipa" subtitle="noastra" titleColor="title-white" />
+      <Title title="Echipa" subtitle="noastra" titleColor="title-white" />
       <div class="container">
         <Carousel settings={settings}>
           {nodes.map(inspector => (
