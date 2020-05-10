@@ -6,7 +6,7 @@ const Title = ({ title, subtitle, className, titleColor }) => {
   return (
     <div className={className}>
       <h4>
-        <span className={titleColor}>{title}</span>
+        <span className={titleColor}>{title} </span>
         <span>{subtitle}</span>
       </h4>
       <span className="title-separator"></span>
@@ -15,10 +15,9 @@ const Title = ({ title, subtitle, className, titleColor }) => {
 }
 
 export default styled(Title)`
-  text-transform: capitalize;
-  font-size: 36px;
-  line-height: 40px;
-  margin-bottom: 2rem;
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 1rem;
   h4 {
     text-align: center;
     letter-spacing: 2px;
@@ -31,10 +30,6 @@ export default styled(Title)`
   .title-white {
     color: #fff;
   }
-  span {
-    display: block;
-  }
-
   .title-separator {
     display: block;
     height: 2px;
@@ -44,6 +39,9 @@ export default styled(Title)`
     margin: 0 auto;
   }
   @media (min-width: 576px) {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 2rem;
     span {
       display: inline-block;
       margin: 0 0.35rem;

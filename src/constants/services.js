@@ -1,8 +1,5 @@
-import React from "react"
-
 import transport from "../images/transport.svg"
 import car from "../images/car.svg"
-import signs from "../images/signs.svg"
 import service from "../images/service.svg"
 
 export default [

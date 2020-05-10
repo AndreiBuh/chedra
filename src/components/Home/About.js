@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Title from "../Title"
-import aboutImg from "../../images/about.jpg"
 import signature from "../../images/signature.png"
 
 import styles from "../../css/about.module.css"
@@ -25,7 +24,7 @@ const About = () => {
   const { aboutImage } = useStaticQuery(getAboutImage)
   return (
     <section className={styles.about}>
-      <Title title="despre" subtitle="noi" titleColor="title-black" />
+      <Title title="Despre" subtitle="noi" titleColor="title-black" />
       <div className={styles.aboutCenter}>
         <article className={styles.aboutImg}>
           <div className={styles.imgContainer}>
@@ -49,11 +48,7 @@ const About = () => {
           <p>
             Printre ei vei regasi ingineri, tehnicieni si maistri auto, cu multa
             experienta si foarte bine pregatiti pentru a se adapta la orice
-            cerinta. Lucram cu aparatura de ultima generatie, pentru ca tinem la
-            calitatea serviciilor noastre si garantam acuratetea inspectiei
-            tehnice. Suntem autorizati sa efectuam inspectia tehnica periodica
-            pentru autovehicule echipate cu motoare pe benzina, motorina,
-            hibride sau cu alimentare duala benzina – GPL.
+            cerinta.
           </p>
           <p>
             Statia noastra de inspectie tehnica presteaza acesta activitate

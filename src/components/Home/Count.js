@@ -1,7 +1,6 @@
 import React from "react"
 import CountUp from "react-countup"
 import BackgroundImage from "gatsby-background-image"
-import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
 import counts from "../../constants/counts"
@@ -26,27 +25,38 @@ const Count = () => {
     <BackgroundImage fluid={data.countImage.childImageSharp.fluid}>
       <section className={styles.counts}>
         <span className={styles.rowOverlay}></span>
-        <div className={styles.center}>
+        <div className="container">
           <div className={styles.center}>
-            {counts.map((item, index) => {
-              return (
-                <article key={index} className={styles.count}>
-                  <div className={styles.imageWrapper}>
-                    <img src={item.icon} className={styles.svgImage} />
-                  </div>
-                  <div className={styles.details}>
-                    <CountUp start={0} end={item.number} delay={0} duration={5}>
-                      {({ countUpRef }) => (
-                        <div>
-                          <span ref={countUpRef} />
-                        </div>
-                      )}
-                    </CountUp>
-                    <h3>{item.text}</h3>
-                  </div>
-                </article>
-              )
-            })}
+            <div className={styles.center}>
+              {counts.map((item, index) => {
+                return (
+                  <article key={index} className={styles.count}>
+                    <div className={styles.imageWrapper}>
+                      <img
+                        src={item.icon}
+                        className={styles.svgImage}
+                        alt={item.title}
+                      />
+                    </div>
+                    <div className={styles.details}>
+                      <CountUp
+                        start={0}
+                        end={item.number}
+                        delay={0}
+                        duration={5}
+                      >
+                        {({ countUpRef }) => (
+                          <div>
+                            <span ref={countUpRef} />
+                          </div>
+                        )}
+                      </CountUp>
+                      <h3>{item.text}</h3>
+                    </div>
+                  </article>
+                )
+              })}
+            </div>
           </div>
         </div>
       </section>

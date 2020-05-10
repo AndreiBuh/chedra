@@ -1,11 +1,11 @@
 .location {
-    background: var(--mainGrey);
+    background: #fff;
     padding: 4rem 0;
   }
    .center {
     width: 80vw;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-column-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-column-gap: 1rem;
   }

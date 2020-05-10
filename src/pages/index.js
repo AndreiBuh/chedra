@@ -10,6 +10,7 @@ import Count from "../components/Home/Count"
 import Gallery from "../components/Home/Gallery"
 import Locations from "../components/Home/Locations"
 import Team from "../components/Home/Team"
+import Clients from "../components/Home/Clients"
 
 export default ({ data }) => (
   <Layout>
@@ -35,6 +36,7 @@ export default ({ data }) => (
     <Count />
     <Locations />
     <Team />
+    <Clients />
   </Layout>
 )
 

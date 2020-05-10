@@ -32,10 +32,12 @@ const Locations = () => {
   return (
     <section className={styles.location}>
       <Title title="Puncte de lucru" subtitle="ITP" titleColor="title-black" />
-      <div className={styles.center}>
-        {nodes.map(item => {
-          return <CardItem key={item.id} item={item} />
-        })}
+      <div className="container">
+        <div className={styles.center}>
+          {nodes.map(location => {
+            return <CardItem key={location.id} location={location} />
+          })}
+        </div>
       </div>
     </section>
   )

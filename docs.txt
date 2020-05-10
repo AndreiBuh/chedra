@@ -180,3 +180,13 @@ require("dotenv").config({
 
 ->Install Prisma GraphQL playground -> yarn add gatsby-plugin-playground
 -> add `gatsby-plugin-playground` in gatsby-config.js
+
+
+-------------------------23. React scroll smooth------------------------------
+
+-> yarn add react-scroll
+
+-------------------------24. React slick carousel--------------------------------
+
+-> yarn add react-slick
+-> yarn add slick-carousel

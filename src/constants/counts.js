@@ -1,4 +1,3 @@
-import React from "react"
 import avatar from "../images/avatar.svg"
 import emoticons from "../images/emoticons.svg"
 import symbol from "../images/symbol.svg"

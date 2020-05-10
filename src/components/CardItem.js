@@ -1,38 +1,47 @@
 import React from "react"
+import { FaMale, FaPhone } from "react-icons/fa"
+import { GiCartwheel } from "react-icons/gi"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "../css/card.module.css"
 
-const CardItem = ({ item }) => {
-  console.log(item)
+const CardItem = ({ location }) => {
   return (
     <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles.card__image}>
           <img
             className={styles.card__image}
-            src={item.image.fluid.src}
+            src={location.image.fluid.src}
             alt="image"
           />
         </div>
 
-        <svg className={styles.card__svg} viewBox="0 0 800 500">
-          <path
-            d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500"
-            stroke="transparent"
-            fill="#333"
-          />
-          <path
-            className={styles.card__line}
-            d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400"
-            stroke="pink"
-            stroke-width="3"
-            fill="transparent"
-          />
-        </svg>
-
         <div className={styles.card__content}>
-          <h1 className={styles.card__title}>{item.city}</h1>
-          <p className={styles.card__paragraph}>{item.description}</p>
+          <h1 className={styles.card__title}>{location.city}</h1>
+          <ul className={styles.card__details}>
+            <li className={styles.card__item}>
+              <FaMale />
+              <span className={styles.card__value}>10</span>
+              <span className={styles.card__text}>Inspectori ITP</span>
+            </li>
+            <li className={styles.card__item}>
+              <GiCartwheel />
+              <span className={styles.card__value}>Da</span>
+              <span className={styles.card__text}>Vulcanizare</span>
+            </li>
+            <li className={styles.card__item}>
+              <FaPhone />
+              <span className={styles.card__value}>0754689944</span>
+              <span className={styles.card__text}>Telefon</span>
+            </li>
+          </ul>
+          <p className={styles.card__paragraph}>{location.description}</p>
+          <AniLink fade to="/contact">
+            <div style={{ width: "100%", textAlign: "center" }}>
+              <button className={styles.card__button}>Detalii</button>
+            </div>
+          </AniLink>
         </div>
       </div>
     </div>
