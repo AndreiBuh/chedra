@@ -1,5 +1,4 @@
 import React from "react"
-import Img from "gatsby-image"
 
 import Title from "../Title"
 import services from "../../constants/services"
@@ -14,8 +13,8 @@ const Services = () => {
         {services.map((item, index) => {
           return (
             <article key={index} className={styles.service}>
-              <Img
-                fluid={item.icon}
+              <img
+                src={item.icon}
                 className={styles.svgImage}
                 alt={item.title}
               />
