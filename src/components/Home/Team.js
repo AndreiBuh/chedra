@@ -34,8 +34,6 @@ let settings = {
   speed: 500,
   slidesToShow: 4,
   slidesToScroll: 4,
-  centerMode: true,
-  centerPadding: "-30px",
   pauseOnHover: true,
   initialSlide: 0,
   responsive: [
