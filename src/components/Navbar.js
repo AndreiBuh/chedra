@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { IconContext } from "react-icons"
-import { FaBars, FaTimes, FaPlus, FaMinus } from "react-icons/fa"
+import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import socialIcons from "../constants/social-icons"
 
@@ -63,9 +63,19 @@ const Navbar = () => {
           {links.map((link, index) => {
             return (
               <li key={index}>
-                <AniLink fade to={link.path}>
+                <AniLink fade to={link.path} activeClassName={styles.active}>
                   {link.text}
                 </AniLink>
+                <ul className={styles.dropdown}>
+                  {link.dropdown &&
+                    link.dropdown.map(item => (
+                      <li key={index}>
+                        <AniLink fade to={item.path}>
+                          {item.text}
+                        </AniLink>
+                      </li>
+                    ))}
+                </ul>
               </li>
             )
           })}
@@ -126,30 +136,55 @@ const Navbar = () => {
           </IconContext.Provider>
           {links.map((link, index) => {
             return (
-              <li key={index} className={styles.navItem}>
-                <div className={styles.navSpan}>
-                  <div>
-                    <AniLink fade to={link.path} className={styles.navLink}>
-                      {link.text}
-                    </AniLink>
+              <>
+                <li key={index} className={styles.navItem}>
+                  <div className={styles.navSpan}>
+                    <div>
+                      <AniLink fade to={link.path} className={styles.navLink}>
+                        {link.text}
+                      </AniLink>
+                    </div>
+                    <div onClick={toggleDropdown}>
+                      <IconContext.Provider
+                        value={{
+                          style: {
+                            color: "white",
+                            fontSize: "1rem",
+                            cursor: "pointer",
+                          },
+                        }}
+                      >
+                        {link.dropdown && (
+                          <div>
+                            {dropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
+                          </div>
+                        )}
+                      </IconContext.Provider>
+                    </div>
                   </div>
-                  <div onClick={toggleDropdown}>
-                    <IconContext.Provider
-                      value={{
-                        style: {
-                          color: "var(--primaryColor)",
-                          fontSize: "1rem",
-                          cursor: "pointer",
-                        },
-                      }}
-                    >
-                      {link.dropdown && (
-                        <div>{dropdownOpen ? <FaMinus /> : <FaPlus />}</div>
-                      )}
-                    </IconContext.Provider>
-                  </div>
-                </div>
-              </li>
+                </li>
+                <ul
+                  className={
+                    dropdownOpen
+                      ? `${styles.subMenu} ${styles.showSubMenu}`
+                      : `${styles.subMenu}`
+                  }
+                >
+                  {dropdownOpen &&
+                    link.dropdown &&
+                    link.dropdown.map(item => (
+                      <li key={index} className={styles.navSubItem}>
+                        <AniLink
+                          fade
+                          to={item.path}
+                          className={styles.navSubLink}
+                        >
+                          {item.text}
+                        </AniLink>
+                      </li>
+                    ))}
+                </ul>
+              </>
             )
           })}
         </ul>
