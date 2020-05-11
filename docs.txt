@@ -190,3 +190,7 @@ require("dotenv").config({
 
 -> yarn add react-slick
 -> yarn add slick-carousel
+
+------------------------25. PropTypes------------------------------------
+
+-> video 154 simple default props
