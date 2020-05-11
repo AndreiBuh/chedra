@@ -194,3 +194,17 @@ require("dotenv").config({
 ------------------------25. PropTypes------------------------------------
 
 -> video 154 simple default props
+
+-------------------------26. Template pages programatically-------------
+
+-> create templates/ folder
+-> gatsby-node
+-> create gatsby-node.js file
+- slug
+- path
+-> query variables
+
+-------------------27. Important for images-------------------
+
+-> when first image styled differently that the rest
+!!!! const [firstImage, ...restImages] = images; !!!
