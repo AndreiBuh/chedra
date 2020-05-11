@@ -2,6 +2,7 @@ import React from "react"
 import { FaMale, FaPhone } from "react-icons/fa"
 import { GiCartwheel } from "react-icons/gi"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import Img from "gatsby-image"
 
 import styles from "../css/card.module.css"
 
@@ -10,10 +11,10 @@ const CardItem = ({ location }) => {
     <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles.card__image}>
-          <img
+          <Img
             className={styles.card__image}
-            src={location.image.fluid.src}
-            alt="image"
+            fluid={location.image.fluid}
+            alt={location.name}
           />
         </div>
 
@@ -30,11 +31,6 @@ const CardItem = ({ location }) => {
               <span className={styles.card__value}>Da</span>
               <span className={styles.card__text}>Vulcanizare</span>
             </li>
-            {/*<li className={styles.card__item}>
-              <FaPhone />
-              <span className={styles.card__value}>0754689944</span>
-              <span className={styles.card__text}>Telefon</span>
-  </li>*/}
           </ul>
           <p className={styles.card__paragraph}>{location.description}</p>
           <AniLink fade to="/contact">

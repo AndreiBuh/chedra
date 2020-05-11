@@ -17,8 +17,8 @@ const getInspectors = graphql`
         job
         phone
         image {
-          fluid(maxWidth: 1200) {
-            src
+          fluid(quality: 100) {
+            ...GatsbyContentfulFluid_withWebp
           }
         }
       }
@@ -28,13 +28,14 @@ const getInspectors = graphql`
 
 let settings = {
   dots: true,
-  arrows: true,
   autoplay: true,
   lazyLoad: true,
   infinite: true,
   speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  centerMode: true,
+  centerPadding: "-30px",
   pauseOnHover: true,
   initialSlide: 0,
   responsive: [

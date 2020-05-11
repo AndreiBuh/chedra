@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Title from "../Title"
 import Carousel from "../Carousel"
@@ -11,7 +12,7 @@ const getGalleryImages = graphql`
     galleryImages: allFile(filter: { relativeDirectory: { eq: "gallery" } }) {
       nodes {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
@@ -55,8 +56,8 @@ const Gallery = () => {
       <Carousel settings={settings}>
         {galleryImages.nodes.map((photo, index) => {
           return (
-            <img
-              src={photo.childImageSharp.fluid.src}
+            <Img
+              fluid={photo.childImageSharp.fluid}
               alt={photo.childImageSharp.fluid.originalName}
               key={index}
             />

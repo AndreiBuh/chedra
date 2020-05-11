@@ -15,7 +15,7 @@ const getLocations = graphql`
         city
         inspectors
         image {
-          fluid(maxWidth: 1200) {
+          fluid(quality: 100) {
             ...GatsbyContentfulFluid_withWebp
           }
         }

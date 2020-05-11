@@ -9,9 +9,7 @@ const About = () => {
     <section className={styles.about}>
       <Title title="Clientii" subtitle="nostrii" titleColor="title-black" />
       <div className={styles.aboutCenter}>
-        <article className={styles.aboutInfo}>
-          <p>Lista cu clienti</p>
-        </article>
+        <article className={styles.aboutInfo}></article>
       </div>
     </section>
   )
