@@ -6,6 +6,20 @@ export default [
   {
     path: "/itp",
     text: "ITP",
+    dropdown: [
+      {
+        path: "/itp-ploiesti",
+        text: "ITP - Ploiesti",
+      },
+      {
+        path: "/itp-ciorani",
+        text: "ITP - Ciorani",
+      },
+      {
+        path: "/itp-floresti",
+        text: "ITP - Floresti",
+      },
+    ],
   },
   {
     path: "/vulcanizare",

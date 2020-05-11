@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { IconContext } from "react-icons"
-import { FaBars, FaTimes, FaPlus } from "react-icons/fa"
+import { FaBars, FaTimes, FaPlus, FaMinus } from "react-icons/fa"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import socialIcons from "../constants/social-icons"
 
@@ -12,7 +12,12 @@ import timer from "../images/header-timer.png"
 import styles from "../css/navbar.module.css"
 
 const Navbar = () => {
+  const [dropdownOpen, setDropdownOpen] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+
+  const toggleDropdown = () => {
+    setDropdownOpen(dropdownOpen => !dropdownOpen)
+  }
 
   return (
     <>
@@ -128,18 +133,19 @@ const Navbar = () => {
                       {link.text}
                     </AniLink>
                   </div>
-                  <div>
+                  <div onClick={toggleDropdown}>
                     <IconContext.Provider
                       value={{
                         style: {
                           color: "var(--primaryColor)",
                           fontSize: "1rem",
+                          cursor: "pointer",
                         },
                       }}
                     >
-                      <div>
-                        <FaPlus />
-                      </div>
+                      {link.dropdown && (
+                        <div>{dropdownOpen ? <FaMinus /> : <FaPlus />}</div>
+                      )}
                     </IconContext.Provider>
                   </div>
                 </div>

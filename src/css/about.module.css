@@ -1,5 +1,5 @@
 .about {
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 .about-center {
   width: 80vw;
@@ -37,7 +37,6 @@
   .about-info {
     margin: 0;
   }
-
 }
 
 @media screen and (min-width: 1200px) {

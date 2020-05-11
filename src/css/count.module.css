@@ -1,57 +1,57 @@
- .counts {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 4rem 0;
-    position: relative;
-  }
+.counts {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 3rem 0;
+  position: relative;
+}
 
 span.row-overlay {
-    background-color: rgba(250,41,100,0.8);
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
+  background-color: rgba(250, 41, 100, 0.8);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
-  .center {
-    width: 80vw;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-column-gap: 2rem;
-    z-index: 3000;
-  }
-  .count {
-    margin: 2rem 0;
-    display: flex;
-    flex-direction: row;
-  }
+.center {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column-gap: 2rem;
+  z-index: 3000;
+}
+.count {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+}
 
-  .count span {
-    font-size: 32px;
-    line-height: 1;
-    color: white;
-  }
-  .count h3 {
-    color: white;
-    margin-bottom: 0;
-  }
+.count span {
+  font-size: 32px;
+  line-height: 1;
+  color: white;
+}
+.count h3 {
+  color: white;
+  margin-bottom: 0;
+}
 
-  .details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  .svg-image {
-    width: 40px;
-  }
+.svg-image {
+  width: 40px;
+}
 
-  .imageWrapper {
-    border: 1px solid #fff;
-    padding: 10px;
-    margin-right: 1rem;
-  }
+.imageWrapper {
+  border: 1px solid #fff;
+  padding: 10px;
+  margin-right: 1rem;
+}
