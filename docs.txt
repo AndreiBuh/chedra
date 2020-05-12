@@ -213,7 +213,8 @@ require("dotenv").config({
 
 -> yarn add gatsby-plugin-react-helmet react-helmet
 -> gatsby-config.js -> plugins: [`gatsby-plugin-react-helmet`]
--> Create SEO.js component and add it to every page.
+-> Create SEO.js component and add it to all pages
 -> Twitter cards, Facebook cards -> share on social media
 -> twitter cards validator
--> 
+-> facebook debugger
+-> sitemap and robots.txt
