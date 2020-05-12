@@ -11,9 +11,14 @@ import Gallery from "../components/Home/Gallery"
 import Locations from "../components/Home/Locations"
 import Team from "../components/Home/Team"
 import Clients from "../components/Home/Clients"
+import SEO from "../components/SEO"
 
 export default ({ data }) => (
   <Layout>
+    <SEO
+      title="Home"
+      description="pagina principala Chedra Tax ITP inspectie tehnica periodica Ploiesti"
+    />
     <StyledHero home="true" image={data.heroImage.childImageSharp.fluid}>
       <Banner
         infoTitle="Nu știi când expiră ITP-ul?"

@@ -30,8 +30,8 @@ export default [
     text: "istorie",
   },
   {
-    path: "/info",
-    text: "info",
+    path: "/informatii",
+    text: "informatii",
   },
   {
     path: "/contact",

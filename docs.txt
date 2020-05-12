@@ -208,3 +208,12 @@ require("dotenv").config({
 
 -> when first image styled differently that the rest
 !!!! const [firstImage, ...restImages] = images; !!!
+
+--------------------28. SEO------------------------------
+
+-> yarn add gatsby-plugin-react-helmet react-helmet
+-> gatsby-config.js -> plugins: [`gatsby-plugin-react-helmet`]
+-> Create SEO.js component and add it to every page.
+-> Twitter cards, Facebook cards -> share on social media
+-> twitter cards validator
+-> 

@@ -10,9 +10,12 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Chedra Tax",
-    description: "Inspectie tehnica periodica",
-    author: "Andrei Buhus",
+    title: "Chedra Tax ITP",
+    description:
+      "Cel mai bun itp Chedra Tax, inspectie tehnica periodica masina, vulcanizare, incarcare freon, Ploiesti, Ciorani, Floresti",
+    siteUrl: "https://papagalule.netlify.app/",
+    image: "/chedra5.png",
+    twitterUsername: "@andrei_buhus",
   },
   plugins: [
     {
@@ -35,5 +38,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-playground`,
+    `gatsby-plugin-react-helmet`,
   ],
 }

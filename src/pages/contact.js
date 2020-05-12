@@ -1,14 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import SEO from "../components/SEO"
 import Layout from "../components/Layout"
 
 const contact = () => {
   return (
     <Layout>
-      <p>
-        contact page <Link to="/">Home page</Link>
-      </p>
+      <SEO title="Contact" description="Chedra Tax ITP contact" />
+      <p>contact page</p>
     </Layout>
   )
 }
