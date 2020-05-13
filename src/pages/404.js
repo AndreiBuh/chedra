@@ -10,10 +10,7 @@ import styles from "../css/error.module.css"
 const error = () => {
   return (
     <Layout>
-      <SEO
-        title="Error 404"
-        description="Chedra Tax ITP inspectie tehnica periodica Ploiesti"
-      />
+      <SEO title="Error" />
       <header className={styles.error}>
         <Banner title="Ai gresit pagina">
           <AniLink fade to="/" className="btn-white">

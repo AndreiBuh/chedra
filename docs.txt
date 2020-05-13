@@ -217,4 +217,11 @@ require("dotenv").config({
 -> Twitter cards, Facebook cards -> share on social media
 -> twitter cards validator
 -> facebook debugger
+
 -> sitemap and robots.txt
+-> install 2 plugins
+-> yarn add gatsby-plugin-sitemap -> `gatsby-plugin-sitemap` in gatsby-config.js
+-> yarn add gatsby-plugin-robots-txt -> `gatsby-plugin-robots-txt` or other options
+-> sitemap -> file where we provide info about pages, videos and other files in our site etc.
+           -> google will read this file to crawl our site
+-> robots.txt -> file that gives instruction to robots about the pages

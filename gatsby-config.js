@@ -12,9 +12,9 @@ module.exports = {
   siteMetadata: {
     title: "Chedra Tax ITP",
     description:
-      "Cel mai bun itp Chedra Tax, inspectie tehnica periodica masina, vulcanizare, incarcare freon, Ploiesti, Ciorani, Floresti",
+      "Chedra Tax ITP - inspectie tehnica periodica, vulcanizare, incarcare freon, Ploiesti, Ciorani, Floresti",
     siteUrl: "https://papagalule.netlify.app/",
-    image: "/chedra5.png",
+    image: "chedra5.png",
     twitterUsername: "@andrei_buhus",
   },
   plugins: [
@@ -32,6 +32,14 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://papagalule.netlify.app/",
+        sitemap: "https://papagalule.netlify.app//sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
@@ -39,5 +47,6 @@ module.exports = {
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-playground`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
   ],
 }

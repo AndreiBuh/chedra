@@ -7,10 +7,7 @@ import SEO from "../components/SEO"
 const info = () => {
   return (
     <Layout>
-      <SEO
-        title="Informatii utile"
-        description="Chedra Tax ITP inspectie tehnica periodica Ploiesti"
-      />
+      <SEO title="Informatii" description="Chedra Tax ITP informatii utile" />
       <p>
         info page <Link to="/">Home page</Link>
       </p>
