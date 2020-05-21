@@ -2,7 +2,7 @@
 
 
 
------------------1. Setup Backroads Travel project---------------
+-----------------1. Setup Chedra  project---------------
 
 -> npx gatsby new backroads https://github.com/gatsbyjs/gatsby-starter-hello-world.git   ->  Starter hello-world
 -> cd backroads

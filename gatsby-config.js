@@ -1,9 +1,3 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -13,7 +7,7 @@ module.exports = {
     title: "Chedra Tax ITP",
     description:
       "Chedra Tax ITP - inspectie tehnica periodica, vulcanizare, incarcare freon, Ploiesti, Ciorani, Floresti",
-    siteUrl: "https://papagalule.netlify.app/",
+    siteUrl: "https://chedra-gatsby.netlify.app/",
     image: "chedra5.png",
     twitterUsername: "@andrei_buhus",
   },
@@ -35,8 +29,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://papagalule.netlify.app/",
-        sitemap: "https://papagalule.netlify.app//sitemap.xml",
+        host: "https://chedra-gatsby.netlify.app/",
+        sitemap: "https://chedra-gatsby.netlify.app//sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

@@ -11,6 +11,7 @@ import Gallery from "../components/Home/Gallery"
 import Locations from "../components/Home/Locations"
 import Team from "../components/Home/Team"
 import Clients from "../components/Home/Clients"
+import Testimonials from "../components/Home/Testimonials"
 import SEO from "../components/SEO"
 
 export default ({ data }) => (
@@ -42,6 +43,7 @@ export default ({ data }) => (
     <Locations />
     <Team />
     <Clients />
+    <Testimonials />
   </Layout>
 )
 

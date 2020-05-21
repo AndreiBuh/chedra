@@ -86,13 +86,17 @@ main {
   flex-direction: column;
 }
 
+.slick-dots button:before {
+  font-size: 11px!important;
+  color: white!important;
+}
+
+.slick-track {
+  text-align: center!important;
+}
+
 @media screen and (min-width: 992px) {
   .defaultHero {
     min-height: 70vh;
-  }
-
-  .container {
-    width: 80%;
-    margin: 0 auto;
   }
 }

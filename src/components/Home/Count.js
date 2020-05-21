@@ -26,37 +26,30 @@ const Count = () => {
       <section className={styles.counts}>
         <span className={styles.rowOverlay}></span>
         <div className="container">
-          <div className={styles.center}>
-            <div className={styles.center}>
-              {counts.map((item, index) => {
-                return (
-                  <article key={index} className={styles.count}>
-                    <div className={styles.imageWrapper}>
-                      <img
-                        src={item.icon}
-                        className={styles.svgImage}
-                        alt={item.title}
-                      />
-                    </div>
-                    <div className={styles.details}>
-                      <CountUp
-                        start={0}
-                        end={item.number}
-                        delay={0}
-                        duration={5}
-                      >
-                        {({ countUpRef }) => (
-                          <div>
-                            <span ref={countUpRef} />
-                          </div>
-                        )}
-                      </CountUp>
-                      <h3>{item.text}</h3>
-                    </div>
-                  </article>
-                )
-              })}
-            </div>
+          <div className="row">
+            {counts.map((item, index) => {
+              return (
+                <article key={index} className={`col-md-3 ${styles.count}`}>
+                  <div className={styles.imageWrapper}>
+                    <img
+                      src={item.icon}
+                      className={styles.svgImage}
+                      alt={item.title}
+                    />
+                  </div>
+                  <div className={styles.details}>
+                    <CountUp start={0} end={item.number} delay={0} duration={5}>
+                      {({ countUpRef }) => (
+                        <div>
+                          <span ref={countUpRef} />
+                        </div>
+                      )}
+                    </CountUp>
+                    <h6>{item.text}</h6>
+                  </div>
+                </article>
+              )
+            })}
           </div>
         </div>
       </section>

@@ -16,14 +16,6 @@ span.row-overlay {
   right: 0;
   top: 0;
 }
-.center {
-  width: 80vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-column-gap: 2rem;
-  z-index: 3000;
-}
 .count {
   margin: 2rem 0;
   display: flex;
@@ -31,11 +23,11 @@ span.row-overlay {
 }
 
 .count span {
-  font-size: 32px;
+  font-size: 30px;
   line-height: 1;
   color: white;
 }
-.count h3 {
+.count h6 {
   color: white;
   margin-bottom: 0;
 }
@@ -52,6 +44,6 @@ span.row-overlay {
 
 .imageWrapper {
   border: 1px solid #fff;
-  padding: 10px;
+  padding: 20px;
   margin-right: 1rem;
 }

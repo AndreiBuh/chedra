@@ -1,0 +1,36 @@
+.testimonial {
+   background: var(--mainWhite);
+}
+
+.testimonial-container {
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;
+padding: 20px 30px 80px 40px;
+}
+
+.text {
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: .5px;
+}
+
+.name {
+    font-size: 20px;
+    line-height: 42px;
+}
+
+.testimonial-content {
+    width: 90%!important;
+    color: var(--mainWhite);
+}
+
+@media screen and (min-width: 768px) {
+    .testimonial-content {
+        width: 70%!important;
+    }
+}

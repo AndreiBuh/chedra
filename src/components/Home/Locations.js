@@ -30,12 +30,16 @@ const Locations = () => {
     locations: { nodes },
   } = useStaticQuery(getLocations)
   return (
-    <section className={styles.location}>
+    <section className={`p-5 ${styles.location}`}>
       <Title title="Puncte de lucru" subtitle="ITP" titleColor="title-black" />
       <div className="container">
-        <div className={styles.center}>
+        <div class="row">
           {nodes.map(location => {
-            return <CardItem key={location.id} location={location} />
+            return (
+              <div class="col-md-4">
+                <CardItem key={location.id} location={location} />
+              </div>
+            )
           })}
         </div>
       </div>
