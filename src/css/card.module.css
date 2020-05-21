@@ -12,7 +12,6 @@
   .card {
     position: relative;
     background: var(--navbarColor);
-    width: 400px;
     border-radius: 6px;
     padding: 1rem;
     color: #aaa;

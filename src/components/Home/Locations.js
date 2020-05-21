@@ -30,7 +30,7 @@ const Locations = () => {
     locations: { nodes },
   } = useStaticQuery(getLocations)
   return (
-    <section className={`p-5 ${styles.location}`}>
+    <section className={`p-0 p-sm-5 ${styles.location}`}>
       <Title title="Puncte de lucru" subtitle="ITP" titleColor="title-black" />
       <div className="container">
         <div class="row">
