@@ -41,7 +41,7 @@ module.exports = {
         short_name: `Chedra Tax`,
         start_url: `/`,
         background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        theme_color: `#a2366c`,
         display: `standalone`,
         icon: `src/images/logo.png`,
       },
