@@ -26,18 +26,18 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Chedra Tax`,
-        short_name: `Chedra Tax`,
-        start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2366c`,
-        display: `standalone`,
-        icon: `src/images/logo.png`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `Chedra Tax`,
+    //     short_name: `Chedra Tax`,
+    //     start_url: `/`,
+    //     background_color: `#f7f0eb`,
+    //     theme_color: `#a2366c`,
+    //     display: `standalone`,
+    //     icon: `src/images/logo.png`,
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
