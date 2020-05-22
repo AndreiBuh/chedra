@@ -27,14 +27,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
-      options: {
-        host: "https://chedra-gatsby.netlify.app/",
-        sitemap: "https://chedra-gatsby.netlify.app//sitemap.xml",
-        policy: [{ userAgent: "*", allow: "/" }],
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Chedra Tax`,
