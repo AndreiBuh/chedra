@@ -39,23 +39,19 @@ module.exports = {
       options: {
         name: `Chedra Tax`,
         short_name: `Chedra Tax`,
-        start_url: `www.chedratax.ro`,
+        start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `src/images/icon.png`,
-        icons: [
-          {
-            src: `src/images/logo.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `src/images/logo.png`,
-            sizes: `512x512`,
-            type: `image/png`,
-          },
-        ],
+        icon: `src/images/logo.png`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.chedratax.ro/",
+        sitemap: "https://www.chedratax.ro/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
     `gatsby-plugin-sass`,
