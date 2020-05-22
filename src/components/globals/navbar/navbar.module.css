@@ -7,7 +7,7 @@
 }
 
 .logo {
-  height: 120px;
+  height: 100px;
 }
 
 .logo-header {
@@ -19,11 +19,11 @@
 .logo-title {
   text-transform: uppercase;
   font-family: "Racing Sans One";
+  font-size: 1.75rem;
 
 }
-
 .logo-description {
-  font-size: 16px;
+  font-size: 12px;
   color: #d1d1d1;
 }
 
@@ -175,6 +175,14 @@
   }
   .nav-links {
     list-style-type: none;
+  }
+
+  .logo-title {
+    font-size: 2.5rem;
+  }
+
+  .logo-description {
+    font-size: 14px;
   }
 
   .nav-social-links {
