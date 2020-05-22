@@ -1,15 +1,20 @@
 import React, { useState } from "react"
 import { IconContext } from "react-icons"
-import { FaBars, FaTimes, FaChevronDown, FaChevronUp } from "react-icons/fa"
+import {
+  FaAlignRight,
+  FaTimes,
+  FaChevronDown,
+  FaChevronUp,
+} from "react-icons/fa"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import socialIcons from "../constants/social-icons"
+import socialIcons from "../../../constants/social-icons"
 
-import links from "../constants/links"
-import logo from "../images/chedra5.png"
-import phone from "../images/header-phone.png"
-import timer from "../images/header-timer.png"
+import links from "../../../constants/links"
+import logo from "../../../images/logo.png"
+import phone from "../../../images/header-phone.png"
+import timer from "../../../images/header-timer.png"
 
-import styles from "../css/navbar.module.css"
+import styles from "./navbar.module.css"
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -22,35 +27,19 @@ const Navbar = () => {
   return (
     <>
       <div className={styles.navCenter} id="navbar">
-        <div className={styles.logoHeader}>
-          <AniLink fade to="/">
+        <AniLink fade to="/">
+          <div className={styles.logoHeader}>
             <img src={logo} alt="logo" className={styles.logo} />
-          </AniLink>
-        </div>
-        <div className={styles.headerDetails}>
-          <div className={styles.phoneHeader}>
-            <img src={phone} alt="phone" />
-            <div className={styles.phoneHeaderDetails}>
-              <span className={styles.navbarSpan}>
-                <strong>Telefon</strong>
-              </span>
-              <a href="tel:0754-689-944">
-                <span className={styles.navbarSpan}>0754-689-944</span>
-              </a>
-            </div>
-          </div>
-          <div className={styles.timerHeader}>
-            <img src={timer} alt="timer" />
-            <div className={styles.timerHeaderDetails}>
-              <span className={styles.navbarSpan}>
-                <strong>Program</strong>
-              </span>
-              <span className={styles.navbarSpan}>
-                Luni - Sambata 9.00 - 19.00
+            <div className="text-center">
+              <h1 className={`mb-0 ${styles.logoTitle}`}>
+                Chedra<span style={{ color: "var(--primaryColor)" }}>Tax</span>
+              </h1>
+              <span className={styles.logoDescription}>
+                Pentru siguranta masinii tale
               </span>
             </div>
           </div>
-        </div>
+        </AniLink>
       </div>
       <div className={styles.navHeader}>
         <ul
@@ -109,7 +98,7 @@ const Navbar = () => {
             }}
           >
             <div>
-              <FaBars onClick={() => setIsOpen(true)} />
+              <FaAlignRight onClick={() => setIsOpen(true)} />
             </div>
           </IconContext.Provider>
         </div>

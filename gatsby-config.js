@@ -8,7 +8,7 @@ module.exports = {
     description:
       "Chedra Tax ITP - inspectie tehnica periodica, vulcanizare, incarcare freon, Ploiesti, Ciorani, Floresti",
     siteUrl: "https://chedra-gatsby.netlify.app/",
-    image: "chedra5.png",
+    image: "logo.png",
     twitterUsername: "@andrei_buhus",
   },
   plugins: [
@@ -32,6 +32,30 @@ module.exports = {
         host: "https://chedra-gatsby.netlify.app/",
         sitemap: "https://chedra-gatsby.netlify.app//sitemap.xml",
         policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Chedra Tax`,
+        short_name: `Chedra Tax`,
+        start_url: `www.chedratax.ro`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/images/icon.png`,
+        icons: [
+          {
+            src: `src/images/logo.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+            src: `src/images/logo.png`,
+            sizes: `512x512`,
+            type: `image/png`,
+          },
+        ],
       },
     },
     `gatsby-plugin-sass`,

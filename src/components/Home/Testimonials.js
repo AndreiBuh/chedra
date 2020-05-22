@@ -21,7 +21,11 @@ const Testimonials = () => {
   return (
     <section className={`my-5 ${styles.testimonial}`}>
       <div className={`${styles.testimonialContainer} container`}>
-        <Title title="Testimoniale" titleColor="title-white" separator="true" />
+        <Title
+          title="Ce spun clientii nostri?"
+          titleColor="title-white"
+          separator="true"
+        />
         <Carousel settings={settings}>
           {testimonials.map((testimonial, index) => {
             return (

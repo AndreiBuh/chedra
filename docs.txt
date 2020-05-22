@@ -225,3 +225,32 @@ require("dotenv").config({
 -> sitemap -> file where we provide info about pages, videos and other files in our site etc.
            -> google will read this file to crawl our site
 -> robots.txt -> file that gives instruction to robots about the pages
+
+
+-------------------29. Program-------------
+
+
+ <div className={styles.headerDetails}>
+          <div className={styles.phoneHeader}>
+            <img src={phone} alt="phone" />
+            <div className={styles.phoneHeaderDetails}>
+              <span className={styles.navbarSpan}>
+                <strong>Telefon</strong>
+              </span>
+              <a href="tel:0754-689-944">
+                <span className={styles.navbarSpan}>0754-689-944</span>
+              </a>
+            </div>
+          </div>
+          <div className={styles.timerHeader}>
+            <img src={timer} alt="timer" />
+            <div className={styles.timerHeaderDetails}>
+              <span className={styles.navbarSpan}>
+                <strong>Program</strong>
+              </span>
+              <span className={styles.navbarSpan}>
+                Luni - Sambata 9.00 - 19.00
+              </span>
+            </div>
+          </div>
+        </div>

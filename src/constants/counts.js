@@ -11,12 +11,12 @@ export default [
   },
   {
     icon: symbol,
-    number: 10,
+    number: 13,
     text: "Ani de experienta",
   },
   {
     icon: avatar,
-    number: 50,
+    number: 8,
     text: "Inspectori ITP",
   },
   {

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato|Poppins");
+@import url("https://fonts.googleapis.com/css?family=Lato|Poppins|Racing+Sans+One");
 
 :root {
   --primaryColor: #fb4848;
@@ -45,8 +45,17 @@ p {
 }
 a {
   text-decoration: none;
-  color: (var(--mainBlack));
+  color: var(--mainBlack);
 }
+
+ul, ol {
+  margin-bottom: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 .defaultHero {
   min-height: 50vh;
   background: linear-gradient(rgba(201, 39, 37, 0.4), rgba(0, 0, 0, 0.4)),
