@@ -1,7 +1,7 @@
 import React from "react"
 
 import Navbar from "./globals/navbar/Navbar"
-import Footer from "./Footer"
+import Footer from "./globals/footer/Footer"
 
 import "../css/bootstrap.min.css"
 import "./layout.css"
