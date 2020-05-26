@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import Title from "../Title"
-import signature from "../../images/signature.png"
 
 import styles from "../../css/about.module.css"
 
@@ -59,7 +58,6 @@ const About = () => {
             <strong>Chelba Dragos</strong> - Fondator{" "}
             <Link to="/">Chedra Tax</Link>
           </p>
-          <img src={signature} alt="signature" />
         </article>
       </div>
     </section>

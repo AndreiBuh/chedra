@@ -5,8 +5,6 @@ import Img from "gatsby-image"
 import Title from "../Title"
 import Carousel from "../Carousel"
 
-import styles from "../../css/gallery.module.css"
-
 const getGalleryImages = graphql`
   {
     galleryImages: allFile(filter: { relativeDirectory: { eq: "gallery" } }) {
@@ -51,7 +49,10 @@ let settings = {
 const Gallery = () => {
   const { galleryImages } = useStaticQuery(getGalleryImages)
   return (
-    <section className={styles.gallery}>
+    <section
+      className="p-4 p-sm-5"
+      style={{ background: "var(--navbarColor)" }}
+    >
       <Title title="Galerie" subtitle="locatii" titleColor="title-white" />
       <Carousel settings={settings}>
         {galleryImages.nodes.map((photo, index) => {

@@ -11,8 +11,6 @@ import socialIcons from "../../../constants/social-icons"
 
 import links from "../../../constants/links"
 import logo from "../../../images/logo.png"
-import phone from "../../../images/header-phone.png"
-import timer from "../../../images/header-timer.png"
 
 import styles from "./navbar.module.css"
 

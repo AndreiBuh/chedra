@@ -23,14 +23,9 @@
       margin: -2rem -2rem 1rem -2rem;
     }
 
-    .card__line {
-    opacity: 0;
-    animation: LineFadeIn .8s .8s forwards ease-in;
-    }
-
     .card__image {
       opacity: 0;
-      animation: ImageFadeIn .8s 1.4s forwards;
+      animation: ImageFadeIn .4s .6s forwards;
     }
 
     .card__title {
@@ -38,7 +33,7 @@
       margin-top: 0;
       font-weight: 800;
       letter-spacing: 0.01em;
-      padding-bottom: 20px;
+      padding: 10px;
       border-bottom: 1px solid #d8d8d8;
     }
 
@@ -70,7 +65,7 @@
 
     .card__content {
       opacity: 0;
-      animation: ContentFadeIn .8s 1s forwards;
+      animation: ContentFadeIn .4s .6s forwards;
     }
 
     .card__paragraph {

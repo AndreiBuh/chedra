@@ -1,10 +1,8 @@
 import React from "react"
 import { animateScroll as scroll } from "react-scroll"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { IconContext } from "react-icons"
 import { FaChevronUp, FaCheckCircle } from "react-icons/fa"
 
-import links from "../../../constants/links"
 import contact from "../../../constants/contact"
 import servicii from "../../../constants/servicii"
 import faq from "../../../constants/faq"
@@ -39,7 +37,7 @@ const Footer = () => {
               <h3 className={`my-3 ${styles.footerTitle}`}>Contact</h3>
               {contact.map((item, index) => {
                 return (
-                  <p className={styles.footerParagraph}>
+                  <p className={styles.footerParagraph} key={index}>
                     {item.title}:{" "}
                     <span style={{ color: "var(--primaryColor)" }}>
                       {item.text}
@@ -52,7 +50,7 @@ const Footer = () => {
               <h3 className={`my-3 ${styles.footerTitle}`}>Servicii</h3>
               {servicii.map((item, index) => {
                 return (
-                  <p className={styles.footerParagraph}>
+                  <p className={styles.footerParagraph} key={index}>
                     <IconContext.Provider
                       value={{ style: { verticalAlign: "middle" } }}
                     >
@@ -68,7 +66,7 @@ const Footer = () => {
               <h3 className={`my-3 ${styles.footerTitle}`}>Suport</h3>
               {faq.map((item, index) => {
                 return (
-                  <p className={styles.footerParagraph}>
+                  <p className={styles.footerParagraph} key={index}>
                     <IconContext.Provider
                       value={{ style: { verticalAlign: "middle" } }}
                     >

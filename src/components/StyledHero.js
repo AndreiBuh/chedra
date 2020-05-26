@@ -18,6 +18,7 @@ export default styled(StyledHero)`
       : "none"};
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   opacity: 1 !important;
   display: flex;
   justify-content: center;

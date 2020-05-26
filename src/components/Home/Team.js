@@ -5,8 +5,6 @@ import Title from "../Title"
 import Carousel from "../Carousel"
 import InspectorItem from "../InspectorItem"
 
-import styles from "../../css/team.module.css"
-
 const getInspectors = graphql`
   {
     inspectors: allContentfulInspectors {
@@ -59,7 +57,10 @@ const Team = () => {
     inspectors: { nodes },
   } = useStaticQuery(getInspectors)
   return (
-    <section className={styles.team}>
+    <section
+      className="p-4 p-sm-5"
+      style={{ background: "var(--navbarColor)" }}
+    >
       <Title title="Echipa" subtitle="noastra" titleColor="title-white" />
       <div class="container">
         <Carousel settings={settings}>

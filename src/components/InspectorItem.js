@@ -10,7 +10,7 @@ const InspectorItem = ({ inspector }) => {
         <Img fluid={inspector.image.fluid} alt={inspector.name} />
       </div>
       <div className={styles.details}>
-        <h5 className={styles.name}>{inspector.name}</h5>
+        <h6 className={`${styles.name} lines`}>{inspector.name}</h6>
         <p className={styles.job}>
           {inspector.job} - {inspector.location}
         </p>

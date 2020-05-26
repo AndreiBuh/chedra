@@ -22,7 +22,10 @@ const getCountImage = graphql`
 const Count = () => {
   const data = useStaticQuery(getCountImage)
   return (
-    <BackgroundImage fluid={data.countImage.childImageSharp.fluid}>
+    <BackgroundImage
+      fluid={data.countImage.childImageSharp.fluid}
+      style={{ backgroundAttachment: "fixed" }}
+    >
       <section className={styles.counts}>
         <span className={styles.rowOverlay}></span>
         <div className="container">

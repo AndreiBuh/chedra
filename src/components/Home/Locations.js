@@ -14,6 +14,7 @@ const getLocations = graphql`
         address
         city
         inspectors
+        slug
         image {
           fluid(quality: 100) {
             ...GatsbyContentfulFluid_withWebp

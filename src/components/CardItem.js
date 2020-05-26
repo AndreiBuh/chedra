@@ -1,5 +1,5 @@
 import React from "react"
-import { FaMale, FaPhone } from "react-icons/fa"
+import { FaMale } from "react-icons/fa"
 import { GiCartwheel } from "react-icons/gi"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Img from "gatsby-image"
@@ -7,6 +7,7 @@ import Img from "gatsby-image"
 import styles from "../css/card.module.css"
 
 const CardItem = ({ location }) => {
+  console.log(location)
   return (
     <div className={styles.container}>
       <div className={styles.card}>
@@ -29,13 +30,13 @@ const CardItem = ({ location }) => {
             <li className={styles.card__item}>
               <GiCartwheel />
               <span className={styles.card__value}>
-                {location.vulcanizare ? "Da" : "Nu"}
+                {location.city === "Ploiesti" ? "Da" : "Nu"}
               </span>
               <span className={styles.card__text}>Vulcanizare</span>
             </li>
           </ul>
           <p className={styles.card__paragraph}>{location.description}</p>
-          <AniLink fade to="/contact">
+          <AniLink fade to={location.slug}>
             <div style={{ width: "100%", textAlign: "center" }}>
               <button className="btn btn-danger px-3">Detalii</button>
             </div>

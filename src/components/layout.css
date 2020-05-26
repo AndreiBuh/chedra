@@ -104,6 +104,32 @@ main {
   text-align: center!important;
 }
 
+.lines {
+  position: relative;
+  padding-left: 30px;
+}
+.lines:before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 8px;
+  height: 16px;
+  background: #36404b;
+  transform: skewX(-35deg);
+}
+
+.lines:after {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 2px;
+  width: 8px;
+  height: 16px;
+  background: #fb4848;
+  transform: skewX(-35deg);
+}
+
 @media screen and (min-width: 992px) {
   .defaultHero {
     min-height: 70vh;
