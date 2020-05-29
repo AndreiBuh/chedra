@@ -5,7 +5,7 @@ import freon from "../images/freon.svg"
 export default [
   {
     icon: car,
-    title: "Inspectie tehnica periodica",
+    title: "ITP",
     text:
       "Echipa Chedra Tax efectueaza ITP-uri pentru toate marcile de masini si autovehicule utilitare cu un tonaj de maximum 3,5 tone",
   },
@@ -13,7 +13,7 @@ export default [
     icon: transport,
     title: "Vulcanizare",
     text:
-      "Printre serviciile de vulcanizare se enumera reparare anvelope, echilibrare roti, indreptare jante, montat jante, montat anvelope, demontare si montare roti si demontare si montare anvelope de pe janta.",
+      "Reparare anvelope, echilibrare roti, indreptare jante, montat jante, montat anvelope, demontare si montare roti si demontare si montare anvelope de pe janta.",
   },
   {
     icon: freon,

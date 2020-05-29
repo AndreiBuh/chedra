@@ -12,6 +12,7 @@ import Locations from "../components/Home/Locations"
 import Team from "../components/Home/Team"
 import Clients from "../components/Home/Clients"
 import Testimonials from "../components/Home/Testimonials"
+import HeroMask from "../components/HeroMask"
 import SEO from "../components/SEO"
 
 export default ({ data }) => (
@@ -21,20 +22,7 @@ export default ({ data }) => (
       description="pagina principala Chedra Tax ITP inspectie tehnica periodica Ploiesti"
     />
     <StyledHero home="true" image={data.heroImage.childImageSharp.fluid}>
-      <Banner
-        infoTitle="Nu știi când expiră ITP-ul?"
-        infoText="Verifică la Registru Auto Roman(RAR) dacă Inspecția Tehnică Periodică a mașinii tale este valabilă!"
-      >
-        <a
-          href="http://prog.rarom.ro/rarpol/rarpol.asp"
-          className="btn-white"
-          target="_blank"
-          without
-          rel="noopener noreferrer"
-        >
-          Verifică
-        </a>
-      </Banner>
+      <HeroMask />
     </StyledHero>
     <Services />
     <About />

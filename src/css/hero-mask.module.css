@@ -1,0 +1,28 @@
+.mask {
+   z-index: 5;
+   background-color: rgba(0, 0, 0, 0.5);
+   visibility: visible;
+   overflow: hidden;
+   border-color: rgb(121, 121, 121);
+   color: var(--mainWhite);
+   width: 90%;
+   height: auto;
+   opacity: 1;
+   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+   transform-origin: 50% 50% 0px;
+}
+
+.mask h2 {
+   font-family: "Racing Sans One", "Poppins";
+   font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+   .mask {
+        width: 40%;
+  }
+
+  .mask h2 {
+        font-size: 30px;
+  }
+}
