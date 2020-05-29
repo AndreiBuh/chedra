@@ -1,6 +1,6 @@
 import transport from "../images/transport.svg"
 import car from "../images/car.svg"
-import service from "../images/service.svg"
+import freon from "../images/freon.svg"
 
 export default [
   {
@@ -16,7 +16,7 @@ export default [
       "Printre serviciile de vulcanizare se enumera reparare anvelope, echilibrare roti, indreptare jante, montat jante, montat anvelope, demontare si montare roti si demontare si montare anvelope de pe janta.",
   },
   {
-    icon: service,
+    icon: freon,
     title: "Incarcare freon",
     text:
       "Service-ul nostru de incarcare freon va propune un diagnostic complet al instalatiei de climatizare, tinanad cont de modelul masinii dumneavoastre si specificatiile constructorului",
