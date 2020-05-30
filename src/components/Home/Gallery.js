@@ -49,10 +49,7 @@ let settings = {
 const Gallery = () => {
   const { galleryImages } = useStaticQuery(getGalleryImages)
   return (
-    <section
-      className="p-4 p-sm-5"
-      style={{ background: "var(--navbarColor)" }}
-    >
+    <section className="p-4 p-sm-5 pattern-background">
       <Title title="Galerie" subtitle="locatii" titleColor="title-white" />
       <Carousel settings={settings}>
         {galleryImages.nodes.map((photo, index) => {

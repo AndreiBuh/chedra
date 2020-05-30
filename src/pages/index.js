@@ -10,7 +10,7 @@ import Count from "../components/Home/Count"
 import Gallery from "../components/Home/Gallery"
 import Locations from "../components/Home/Locations"
 import Team from "../components/Home/Team"
-import Clients from "../components/Home/Clients"
+import Steps from "../components/Home/Steps"
 import Testimonials from "../components/Home/Testimonials"
 import HeroMask from "../components/HeroMask"
 import SEO from "../components/SEO"
@@ -26,10 +26,10 @@ export default ({ data }) => (
     </StyledHero>
     <Services />
     <About />
+    <Steps />
     <Gallery />
     <Locations />
     <Count />
-    <Clients />
     <Team />
     <Testimonials />
   </Layout>

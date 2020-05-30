@@ -1,59 +1,7 @@
-.service {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.service h5 {
+ h5 {
   text-transform: uppercase;
   font-weight: 700;
 }
 .svg-image {
   max-width: 60px;
-}
-
-
-.icon-wrapper {
-  position: relative;
-  flex: 0 0 auto;
-  width: 86px;
-  height: 110px;
-  border-radius: 26%;
-  text-align: center;
-  font-size: 56px;
-  line-height: 110px;
-  transform: rotate(60deg);
-  margin: 10px 18px;
-  background: var(--mainGrey);
-}
-
-.icon-wrapper:before {
-transform: rotate(60deg);
-}
-.icon-wrapper:before,  .icon-wrapper:after {
-position: absolute;
-width: inherit;
-height: inherit;
-border-radius: inherit;
-background: inherit;
-top: 0px;
-left: 0px;
-content: '';
-}
-
-.icon-wrapper:after {
-transform: rotate(-60deg);
-}
-
-.icon-content {
-width: 124px;
-height: 110px;
-position: absolute;
-z-index: 1;
-top: 10px;
-flex: 0 0 auto;
-text-align: center;
-line-height: 110px;
-overflow: hidden;
 }

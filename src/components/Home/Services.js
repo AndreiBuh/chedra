@@ -2,6 +2,7 @@ import React from "react"
 import { Zoom } from "react-awesome-reveal"
 
 import Title from "../Title"
+import Comb from "../globals/comb/Comb"
 import services from "../../constants/services"
 
 import styles from "../../css/services.module.css"
@@ -13,20 +14,19 @@ const Services = () => {
       <div className="row">
         {services.map((item, index) => {
           return (
-            <div className="col-sm-4">
+            <div className="col-sm-4 text-center" key={index}>
               <Zoom cascade>
-                <article key={index} className={styles.service}>
-                  <div className={styles.iconWrapper}></div>
-                  <div className={styles.iconContent}>
+                <>
+                  <Comb>
                     <img
                       src={item.icon}
                       className={styles.svgImage}
                       alt={item.title}
                     />
-                  </div>
+                  </Comb>
                   <h5>{item.title}</h5>
                   <p>{item.text}</p>
-                </article>
+                </>
               </Zoom>
             </div>
           )

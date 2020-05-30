@@ -20,7 +20,7 @@ let settings = {
 const Testimonials = () => {
   return (
     <section className={`my-5 ${styles.testimonial}`}>
-      <div className={`${styles.testimonialContainer} container`}>
+      <div className="pattern-background container">
         <Title
           title="Ce spun clientii nostri?"
           titleColor="title-white"
