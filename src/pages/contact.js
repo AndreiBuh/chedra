@@ -25,30 +25,33 @@ const contact = () => {
               subtitle="Ploiesti"
               titleColor="title-black"
             />
-            <Zoom cascade>
-              <div className="row">
-                <div className="col-sm-6 row p-2 p-sm-5">
-                  {contactPloiesti.map((item, index) => {
-                    return (
-                      <div className="col-sm-6 text-center">
-                        <Comb>
-                          <img
-                            src={item.icon}
-                            className={styles.svgImage}
-                            alt={item.title}
-                          />
-                        </Comb>
-                        <h5>{item.title}</h5>
-                        <p>{item.text}</p>
-                      </div>
-                    )
-                  })}
-                </div>
-                <div className="col-sm-6 p-0 p-sm-5">
-                  <Form className="bg-light p-3" rows="10" />
-                </div>
+
+            <div className="row">
+              <div className="col-sm-6 row p-2 p-sm-5 mx-auto">
+                {contactPloiesti.map((item, index) => {
+                  return (
+                    <div className="col-sm-6 text-center">
+                      <Zoom cascade>
+                        <>
+                          <Comb>
+                            <img
+                              src={item.icon}
+                              className={styles.svgImage}
+                              alt={item.title}
+                            />
+                          </Comb>
+                        </>
+                      </Zoom>
+                      <h5>{item.title}</h5>
+                      <p>{item.text}</p>
+                    </div>
+                  )
+                })}
               </div>
-            </Zoom>
+              <div className="col-sm-6 p-0 p-sm-5">
+                <Form className="bg-light p-3" rows="10" />
+              </div>
+            </div>
           </div>
           <div className={styles.mapRouter}>
             <div className={styles.gmap}>
@@ -73,30 +76,32 @@ const contact = () => {
               subtitle="Ciorani"
               titleColor="title-black"
             />
-            <Zoom cascade>
-              <div className="row">
-                <div className="col-sm-6 p-0 p-sm-5">
-                  <Form className="bg-light p-3" rows="10" />
-                </div>
-                <div className="col-sm-6 row p-2 p-sm-5">
-                  {contactCiorani.map((item, index) => {
-                    return (
-                      <div className="col-sm-6 text-center">
-                        <Comb>
-                          <img
-                            src={item.icon}
-                            className={styles.svgImage}
-                            alt={item.title}
-                          />
-                        </Comb>
-                        <h5>{item.title}</h5>
-                        <p>{item.text}</p>
-                      </div>
-                    )
-                  })}
-                </div>
+            <div className="row">
+              <div className="col-sm-6 p-0 p-sm-5">
+                <Form className="bg-light p-3" rows="10" />
               </div>
-            </Zoom>
+              <div className="col-sm-6 row p-2 p-sm-5 mx-auto">
+                {contactCiorani.map((item, index) => {
+                  return (
+                    <div className="col-sm-6 text-center">
+                      <Zoom cascade>
+                        <>
+                          <Comb>
+                            <img
+                              src={item.icon}
+                              className={styles.svgImage}
+                              alt={item.title}
+                            />
+                          </Comb>
+                        </>
+                      </Zoom>
+                      <h5>{item.title}</h5>
+                      <p>{item.text}</p>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
           </div>
           <div class="mapouter">
             <div class="gmap_canvas">
@@ -121,30 +126,32 @@ const contact = () => {
               subtitle="Floresti"
               titleColor="title-black"
             />
-            <Zoom cascade>
-              <div className="row">
-                <div className="col-sm-6 row p-2 p-sm-5">
-                  {contactFloresti.map((item, index) => {
-                    return (
-                      <div className="col-sm-6 text-center">
-                        <Comb>
-                          <img
-                            src={item.icon}
-                            className={styles.svgImage}
-                            alt={item.title}
-                          />
-                        </Comb>
-                        <h5>{item.title}</h5>
-                        <p>{item.text}</p>
-                      </div>
-                    )
-                  })}
-                </div>
-                <div className="col-sm-6 p-0 p-sm-5">
-                  <Form className="bg-light p-3" rows="10" />
-                </div>
+            <div className="row">
+              <div className="col-sm-6 row p-2 p-sm-5 mx-auto">
+                {contactFloresti.map((item, index) => {
+                  return (
+                    <div className="col-sm-6 text-center">
+                      <Zoom cascade>
+                        <>
+                          <Comb>
+                            <img
+                              src={item.icon}
+                              className={styles.svgImage}
+                              alt={item.title}
+                            />
+                          </Comb>
+                        </>
+                      </Zoom>
+                      <h5>{item.title}</h5>
+                      <p>{item.text}</p>
+                    </div>
+                  )
+                })}
               </div>
-            </Zoom>
+              <div className="col-sm-6 p-0 p-sm-5">
+                <Form className="bg-light p-3" rows="10" />
+              </div>
+            </div>
           </div>
           <div class="mapouter">
             <div class="gmap_canvas">
