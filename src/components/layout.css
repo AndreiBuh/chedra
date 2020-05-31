@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins|Racing+Sans+One");
+@import url("https://fonts.googleapis.com/css?family=Poppins|Racing+Sans+One|Montserrat");
 
 :root {
   --primaryColor: #fb4848;
@@ -141,7 +141,19 @@ main {
   padding: 20px 30px 80px 40px;
 }
 
+/* Accordion global css */
 
+.active {
+  background: #ccc;
+}
+.icon {
+  margin-left: auto;
+  transition: transform .6s ease;
+}
+.rotate {
+  transform: rotate(90deg);
+}
+/* Accordion end */
 
 @media screen and (min-width: 992px) {
   .defaultHero {

@@ -64,6 +64,7 @@ const contact = () => {
                 scrolling="no"
                 marginHeight="0"
                 marginWidth="0"
+                title="Harta Ploiesti"
               ></iframe>
             </div>
           </div>
@@ -114,6 +115,7 @@ const contact = () => {
                 scrolling="no"
                 marginHeight="0"
                 marginWidth="0"
+                title="Harta Ciorani"
               ></iframe>
             </div>
           </div>
@@ -164,6 +166,7 @@ const contact = () => {
                 scrolling="no"
                 marginHeight="0"
                 marginWidth="0"
+                title="Harta Floresti"
               ></iframe>
             </div>
           </div>
