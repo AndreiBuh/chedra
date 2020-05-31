@@ -48,7 +48,7 @@ const contact = () => {
                   )
                 })}
               </div>
-              <div className="col-sm-6 p-0 p-sm-5">
+              <div className="col-sm-6 p-0 p-sm-5 col-sm-push-6">
                 <Form className="bg-light p-3" rows="10" />
               </div>
             </div>
@@ -77,10 +77,10 @@ const contact = () => {
               titleColor="title-black"
             />
             <div className="row">
-              <div className="col-sm-6 p-0 p-sm-5">
+              <div className="col-sm-6 p-0 p-sm-5 order-last order-sm-first">
                 <Form className="bg-light p-3" rows="10" />
               </div>
-              <div className="col-sm-6 row p-2 p-sm-5 mx-auto">
+              <div className="col-sm-6 row p-2 p-sm-5 mx-auto order-first order-sm-last">
                 {contactCiorani.map((item, index) => {
                   return (
                     <div className="col-sm-6 text-center">
