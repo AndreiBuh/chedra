@@ -38,3 +38,18 @@ label {
   color: var(--mainWhite);
   border-color: var(--darkGrey);
 }
+
+
+.svg-image {
+  width: 60px;
+}
+
+
+.map-router {
+  position:relative;
+  text-align:right;
+}
+.gmap {
+  overflow:hidden;
+  background:none!important;
+}

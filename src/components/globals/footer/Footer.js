@@ -3,6 +3,8 @@ import { animateScroll as scroll } from "react-scroll"
 import { IconContext } from "react-icons"
 import { FaChevronUp, FaCheckCircle } from "react-icons/fa"
 
+import Form from "../form/Form"
+
 import contact from "../../../constants/contact"
 import servicii from "../../../constants/servicii"
 import faq from "../../../constants/faq"
@@ -79,35 +81,7 @@ const Footer = () => {
             </div>
             <div className="col-sm-3">
               <h3 className={`my-3 ${styles.footerTitle}`}>Mesaj</h3>
-              <form>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="nume"
-                    placeholder="Nume"
-                  />
-                </div>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="email"
-                    placeholder="Email"
-                  />
-                </div>
-                <div className="form-group">
-                  <textarea
-                    className="form-control"
-                    rows="5"
-                    name="mesaj"
-                    placeholder="Mesaj"
-                  ></textarea>
-                </div>
-                <div style={{ width: "100%", textAlign: "center" }}>
-                  <button className="btn btn-danger px-4">Trimite</button>
-                </div>
-              </form>
+              <Form rows="5" />
             </div>
           </div>
         </div>
