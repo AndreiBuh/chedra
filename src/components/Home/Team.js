@@ -57,7 +57,7 @@ const Team = () => {
     inspectors: { nodes },
   } = useStaticQuery(getInspectors)
   return (
-    <section className="p-4 p-sm-5 pattern-background">
+    <section className="p-5 pattern-background">
       <Title title="Echipa" subtitle="noastra" titleColor="title-white" />
       <div class="container">
         <Carousel settings={settings}>

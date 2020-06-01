@@ -147,13 +147,16 @@ main {
   background: #ccc;
 }
 .icon {
-  margin-left: auto;
   transition: transform .6s ease;
 }
 .rotate {
   transform: rotate(90deg);
 }
 /* Accordion end */
+
+.svg-image {
+  max-width: 60px;
+}
 
 @media screen and (min-width: 992px) {
   .defaultHero {

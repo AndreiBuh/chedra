@@ -19,6 +19,8 @@
     color: var(--mainWhite);
 }
 
+
+
 @media screen and (min-width: 768px) {
     .testimonial-content {
         width: 70%!important;

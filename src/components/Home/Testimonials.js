@@ -19,7 +19,7 @@ let settings = {
 }
 const Testimonials = () => {
   return (
-    <section className={`my-5 ${styles.testimonial}`}>
+    <section className={`py-5 ${styles.testimonial}`}>
       <div className="pattern-background container">
         <Title
           title="Ce spun clientii nostri?"

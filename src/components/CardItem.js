@@ -3,7 +3,7 @@ import { FaMale } from "react-icons/fa"
 import { GiCartwheel } from "react-icons/gi"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Img from "gatsby-image"
-import { Zoom } from "react-awesome-reveal"
+import { Fade } from "react-awesome-reveal"
 
 import styles from "../css/card.module.css"
 
@@ -11,7 +11,7 @@ const CardItem = ({ location }) => {
   console.log(location)
   return (
     <div className={styles.container}>
-      <Zoom cascade>
+      <Fade cascade>
         <div className={styles.card}>
           <div className={styles.card__image}>
             <Img
@@ -47,7 +47,7 @@ const CardItem = ({ location }) => {
             </AniLink>
           </div>
         </div>
-      </Zoom>
+      </Fade>
     </div>
   )
 }

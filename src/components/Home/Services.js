@@ -20,7 +20,7 @@ const Services = () => {
                   <Comb>
                     <img
                       src={item.icon}
-                      className={styles.svgImage}
+                      className="svg-image"
                       alt={item.title}
                     />
                   </Comb>

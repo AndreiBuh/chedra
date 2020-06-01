@@ -12,6 +12,7 @@ import Team from "../components/Home/Team"
 import Steps from "../components/Home/Steps"
 import Testimonials from "../components/Home/Testimonials"
 import HeroMask from "../components/HeroMask"
+import Newsletter from "../components/globals/newsletter/Newsletter"
 import SEO from "../components/SEO"
 
 export default ({ data }) => (
@@ -31,6 +32,7 @@ export default ({ data }) => (
     <Count />
     <Team />
     <Testimonials />
+    <Newsletter />
   </Layout>
 )
 
