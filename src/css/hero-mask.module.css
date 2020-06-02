@@ -13,7 +13,7 @@
 }
 
 .mask h2 {
-   font-family: "Racing Sans One", "Poppins";
+   font-family: "Montserrat", "Poppins";
    font-size: 20px;
 }
 
@@ -23,6 +23,6 @@
   }
 
   .mask h2 {
-        font-size: 30px;
+        font-size: 25px;
   }
 }

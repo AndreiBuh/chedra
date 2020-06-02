@@ -11,6 +11,8 @@ import socialIcons from "../../../constants/social-icons"
 
 import links from "../../../constants/links"
 import logo from "../../../images/logo.png"
+import timer from "../../../images/header-timer.png"
+import phone from "../../../images/header-phone.png"
 
 import styles from "./navbar.module.css"
 
@@ -38,6 +40,31 @@ const Navbar = () => {
             </div>
           </div>
         </AniLink>
+
+        <div className={styles.headerDetails}>
+          <div className={styles.phoneHeader}>
+            <img src={phone} alt="phone" />
+            <div className={styles.phoneHeaderDetails}>
+              <span className={styles.navbarSpan}>
+                <strong>Telefon</strong>
+              </span>
+              <a href="tel:0754-689-944">
+                <span className={styles.navbarSpan}>0735 222 777</span>
+              </a>
+            </div>
+          </div>
+          <div className={styles.timerHeader}>
+            <img src={timer} alt="timer" />
+            <div className={styles.timerHeaderDetails}>
+              <span className={styles.navbarSpan}>
+                <strong>Program</strong>
+              </span>
+              <span className={styles.navbarSpan}>
+                Luni - Sambata 9.00 - 18.00
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
       <div className={styles.navHeader}>
         <ul

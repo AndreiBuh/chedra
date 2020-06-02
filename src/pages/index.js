@@ -13,7 +13,9 @@ import Steps from "../components/Home/Steps"
 import Testimonials from "../components/Home/Testimonials"
 import HeroMask from "../components/HeroMask"
 import Newsletter from "../components/globals/newsletter/Newsletter"
+import Faq from "../components/Home/Faq"
 import SEO from "../components/SEO"
+import FaqHome from "../components/FaqHome"
 
 export default ({ data }) => (
   <Layout>
@@ -31,6 +33,9 @@ export default ({ data }) => (
     <Locations />
     <Count />
     <Team />
+    <Faq image={data.faqImage.childImageSharp.fluid}>
+      <FaqHome />
+    </Faq>
     <Testimonials />
     <Newsletter />
   </Layout>
@@ -40,6 +45,13 @@ export default ({ data }) => (
 export const query = graphql`
   {
     heroImage: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    faqImage: file(relativePath: { eq: "car.jpg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_withWebp

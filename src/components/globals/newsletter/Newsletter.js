@@ -24,8 +24,8 @@ const Newsletter = () => {
                 <input
                   className={styles.input}
                   type="email"
-                  name="EMAIL"
-                  placeholder="Adresa Email"
+                  name="email"
+                  placeholder="Email"
                   required
                 />
               </div>
@@ -40,7 +40,7 @@ const Newsletter = () => {
                     textAlign: "center",
                   }}
                 >
-                  <button className="btn btn-danger btn-lg px-5">
+                  <button className="btn btn-danger btn-lg px-2 px-sm-5">
                     Abonare
                   </button>
                 </div>
