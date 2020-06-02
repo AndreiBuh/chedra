@@ -32,10 +32,10 @@ export default ({ data }) => (
     <Gallery />
     <Locations />
     <Count />
-    <Team />
     <Faq image={data.faqImage.childImageSharp.fluid}>
       <FaqHome />
     </Faq>
+    <Team />
     <Testimonials />
     <Newsletter />
   </Layout>

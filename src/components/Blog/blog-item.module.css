@@ -1,0 +1,18 @@
+.blog-card {
+    box-shadow: 0 0.1875rem 1.5rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.375rem;
+}
+
+.card-img {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .card-title {
+    margin-bottom: 0.3rem;
+  }
+
+
+  .blog-card:hover {
+      box-shadow: 0 0.1875rem 1.5rem rgba(0, 0, 0, 0.4);;
+  }

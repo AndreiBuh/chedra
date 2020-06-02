@@ -1,0 +1,15 @@
+.title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 27px;
+    line-height: 1;
+}
+
+.category {
+    color: #61728a;
+    flex-grow: 10;
+    display: inline-block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px
+}
