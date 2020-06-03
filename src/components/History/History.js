@@ -10,7 +10,7 @@ const History = () => {
         title="Istoria"
         subtitle="noastră"
         titleColor="title-black"
-        className="p-5"
+        className="my-3 my-sm-5"
       />
       <Progress />
     </div>

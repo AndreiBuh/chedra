@@ -22,12 +22,12 @@ const Progress = () => {
                 })}
               </TabList>
             </div>
-            <div className="col-sm-8">
+            <div className="col-sm-8 mt-5">
               {history.map((item, index) => {
                 return (
                   <Zoom>
                     <TabPanel>
-                      <h4>{item.title}</h4>
+                      <h5>{item.title}</h5>
                       <p>{item.text}</p>
                     </TabPanel>
                   </Zoom>

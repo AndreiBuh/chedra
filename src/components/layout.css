@@ -237,6 +237,12 @@ Sidebar title */
 
 .react-tabs__tab-panel {
   display: none;
+  box-shadow: 0 10px 15px 2px rgba(170,170,170,0.21);
+  border-radius: 2px;
+	padding: 20px;
+}
+.react-tabs__tab-panel:hover {
+  box-shadow: 0 10px 15px 2px rgba(251, 72, 72,0.2);
 }
 .react-tabs__tab-panel--selected {
   display: block;
