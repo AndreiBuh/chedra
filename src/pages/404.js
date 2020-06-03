@@ -1,5 +1,5 @@
 import React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 import Layout from "../components/Layout"
 import Banner from "../components/Banner"
@@ -13,9 +13,9 @@ const error = () => {
       <SEO title="Error" />
       <header className={styles.error}>
         <Banner title="Ai gresit pagina">
-          <AniLink fade to="/" className="btn-white">
+          <Link fade to="/" className="btn-white">
             Intoarce-te la pagina principala
-          </AniLink>
+          </Link>
         </Banner>
       </header>
     </Layout>

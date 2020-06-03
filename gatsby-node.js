@@ -1,5 +1,9 @@
+const path = require("path")
+const { paginate } = require("gatsby-awesome-pagination")
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const result = await graphql(`
+  const { createPage } = actions
+  const articles = await graphql(`
     {
       allContentfulArticle {
         nodes {
@@ -9,14 +13,22 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
-  if (result.errors) {
-    reporter.panic("Eroare", JSON.stringify(result.errors))
+  if (articles.errors) {
+    reporter.panic("Eroare", JSON.stringify(articles.errors))
   }
 
-  result.data.allContentfulArticle.nodes.forEach(article => {
-    actions.createPage({
+  // paginate({
+  //   createPage,
+  //   articles: articles.data.allContentfulArticle.nodes,
+  //   itemsPerPage: 2,
+  //   pathPrefix: "/blog",
+  //   component: path.resolve("./src/templates/article-template.js"),
+  // })
+
+  articles.data.allContentfulArticle.nodes.forEach(article => {
+    createPage({
       path: `/blog/${article.slug}/`,
-      component: require.resolve("./src/templates/article-template.js"),
+      component: path.resolve("./src/templates/article-template.js"),
       context: {
         slug: article.slug,
       },

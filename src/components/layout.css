@@ -164,6 +164,33 @@ main {
   column-count: 2;
 }
 
+/* Breadcrumb */
+.breadcrumb {
+  background: var(--mainGrey);
+  margin-bottom: 0;
+}
+.breadcrumb__link, .breadcrumb__separator {
+  font-size: 18px;
+  font-family: "Racing Sans One";
+}
+
+.breadcrumb__list {
+  align-items: baseline;
+}
+
+.breadcrumb__link:hover {
+  color: var(--primaryColor);
+}
+/*
+Sidebar title */
+
+.sidebar-title {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 27px;
+  line-height: 1;
+}
+
 @media screen and (max-width:768px) {
   .card-columns {
     column-count: 1;

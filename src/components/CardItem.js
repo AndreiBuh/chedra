@@ -1,7 +1,7 @@
 import React from "react"
 import { FaMale } from "react-icons/fa"
 import { GiCartwheel } from "react-icons/gi"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import Img from "gatsby-image"
 import { Fade } from "react-awesome-reveal"
 
@@ -40,11 +40,11 @@ const CardItem = ({ location }) => {
               </li>
             </ul>
             <p className={styles.card__paragraph}>{location.description}</p>
-            <AniLink fade to={location.slug}>
+            <Link fade to={location.slug}>
               <div style={{ width: "100%", textAlign: "center" }}>
                 <button className="btn btn-danger px-3">Detalii</button>
               </div>
-            </AniLink>
+            </Link>
           </div>
         </div>
       </Fade>

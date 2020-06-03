@@ -8,7 +8,7 @@ import styles from "./categories.module.css"
 const Categories = () => {
   return (
     <div className="my-5">
-      <h3 className={styles.title}>Categorii</h3>
+      <h3 className="sidebar-title">Categorii</h3>
       {categories.map(category => {
         return (
           <div>

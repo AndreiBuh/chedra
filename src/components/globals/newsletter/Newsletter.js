@@ -12,7 +12,7 @@ const Newsletter = () => {
         <div className="row">
           <div className="col-sm-3">
             <Comb background="var(--mainWhite)">
-              <img src={newsletter} className="svg-image" />
+              <img src={newsletter} className="svg-image" alt="newsletter" />
             </Comb>
           </div>
           <div className="col-sm-6 pt-3">

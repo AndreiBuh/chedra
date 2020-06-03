@@ -6,7 +6,7 @@ import {
   FaChevronDown,
   FaChevronUp,
 } from "react-icons/fa"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import socialIcons from "../../../constants/social-icons"
 
 import links from "../../../constants/links"
@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <>
       <div className={styles.navCenter} id="navbar">
-        <AniLink fade to="/">
+        <Link fade to="/">
           <div className={styles.logoHeader}>
             <img src={logo} alt="logo" className={styles.logo} />
             <div className="text-center">
@@ -39,7 +39,7 @@ const Navbar = () => {
               </span>
             </div>
           </div>
-        </AniLink>
+        </Link>
 
         <div className={styles.headerDetails}>
           <div className={styles.phoneHeader}>
@@ -77,16 +77,14 @@ const Navbar = () => {
           {links.map((link, index) => {
             return (
               <li key={index}>
-                <AniLink fade to={link.path} activeClassName={styles.active}>
+                <Link fade to={link.path} activeClassName={styles.active}>
                   {link.text}
-                </AniLink>
+                </Link>
                 <ul className={styles.dropdown}>
                   {link.dropdown &&
                     link.dropdown.map(item => (
                       <li key={index}>
-                        <AniLink fade to={item.path}>
-                          {item.text}
-                        </AniLink>
+                        <Link to={item.path}>{item.text}</Link>
                       </li>
                     ))}
                 </ul>
@@ -154,9 +152,9 @@ const Navbar = () => {
                 <li key={index} className={styles.navItem}>
                   <div className={styles.navSpan}>
                     <div>
-                      <AniLink fade to={link.path} className={styles.navLink}>
+                      <Link to={link.path} className={styles.navLink}>
                         {link.text}
-                      </AniLink>
+                      </Link>
                     </div>
                     <div onClick={toggleDropdown}>
                       <IconContext.Provider
@@ -188,13 +186,9 @@ const Navbar = () => {
                     link.dropdown &&
                     link.dropdown.map((item, index) => (
                       <li key={index} className={styles.navSubItem}>
-                        <AniLink
-                          fade
-                          to={item.path}
-                          className={styles.navSubLink}
-                        >
+                        <Link to={item.path} className={styles.navSubLink}>
                           {item.text}
-                        </AniLink>
+                        </Link>
                       </li>
                     ))}
                 </ul>

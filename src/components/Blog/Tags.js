@@ -1,5 +1,5 @@
 import React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 import tags from "../../constants/tags"
 import styles from "./tags.module.css"
@@ -7,12 +7,12 @@ import styles from "./tags.module.css"
 const Tags = () => {
   return (
     <div className="my-5">
-      <h3 className={styles.title}>Etichete</h3>
+      <h3 className="sidebar-title">Etichete</h3>
       {tags.map(tag => {
         return (
-          <AniLink fade to="/">
+          <Link fade to="/">
             <span className={styles.link}>{tag.title}</span>
-          </AniLink>
+          </Link>
         )
       })}
     </div>

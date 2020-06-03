@@ -53,6 +53,14 @@ module.exports = {
         showSpinner: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        useAutoGen: true,
+        autoGenHomeLabel: `acasa`,
+        exclude: [`/404.js/`],
+      },
+    },
     `gatsby-transformer-remark`,
     `@contentful/gatsby-transformer-contentful-richtext`,
     `gatsby-plugin-sass`,
