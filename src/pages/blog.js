@@ -6,16 +6,16 @@ import Layout from "../components/Layout"
 import BlogList from "../components/Blog/BlogList"
 import BlogSidebar from "../components/Blog/BlogSidebar"
 
-const noutati = () => {
+const blog = () => {
   return (
     <Layout>
-      <SEO title="Noutati" description="Chedra Tax ITP noutati" />
-      <div className="container p-5">
+      <SEO title="Blog" description="Chedra Tax ITP Blog" />
+      <div className="container p-3 p-sm-5">
         <Title
           title="Articole"
           subtitle="Blog"
           titleColor="title-black"
-          className="my-5"
+          className="my-3 my-sm-5"
         />
         <div className="row">
           <div className="col-sm-8">
@@ -30,4 +30,4 @@ const noutati = () => {
   )
 }
 
-export default noutati
+export default blog

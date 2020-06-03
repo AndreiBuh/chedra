@@ -38,7 +38,7 @@ export default [
     text: "contact",
   },
   {
-    path: "/noutati",
-    text: "noutati",
+    path: "/blog",
+    text: "blog",
   },
 ]

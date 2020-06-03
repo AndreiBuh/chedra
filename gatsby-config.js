@@ -53,6 +53,7 @@ module.exports = {
         showSpinner: true,
       },
     },
+    `gatsby-transformer-remark`,
     `@contentful/gatsby-transformer-contentful-richtext`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,

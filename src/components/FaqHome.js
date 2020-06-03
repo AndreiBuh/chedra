@@ -8,7 +8,7 @@ import styles from "../css/faq-home.module.css"
 
 const getQuestions = graphql`
   {
-    questions: allContentfulFaq(limit: 3) {
+    questions: allContentfulFaq(filter: { feature: { eq: true } }) {
       nodes {
         content {
           content

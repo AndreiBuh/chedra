@@ -186,7 +186,7 @@ const Navbar = () => {
                 >
                   {dropdownOpen &&
                     link.dropdown &&
-                    link.dropdown.map(item => (
+                    link.dropdown.map((item, index) => (
                       <li key={index} className={styles.navSubItem}>
                         <AniLink
                           fade

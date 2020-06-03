@@ -1,31 +1,34 @@
 import React from "react"
+import Img from "gatsby-image"
+import { Fade } from "react-awesome-reveal"
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import styles from "./blog-item.module.css"
 
-const BlogItem = () => {
+const BlogItem = ({ title, read, date, content, image, slug }) => {
+  console.log(image.fluid)
   return (
-    <div className={`${styles.blogCard} card`}>
-      <img
-        className="card-img"
-        src="https://www.kmgauto.ro/images/img-stire-kmg53.jpg"
-        alt="masina"
-      />
-      <div className="card-body">
-        <h6 className="card-title font-weight-bold">
-          Inspecția tehnică periodică: cum și când se face
-        </h6>
-        <small className="text-muted">
-          <span className="time">30 minutes </span> |
-          <span className="date"> Oct 20, 12:45</span>
-        </small>
-        <p className="card-text">
-          Nu poți circula legal pe drumurile publice din România fără ca mașina
-          ta să fi trecut cu brio inspecția tehnică periodică.
-        </p>
-        <button className="btn btn-danger px-4">Citeste</button>
+    <Fade cascade>
+      <div className={`${styles.blogCard} card mb-3`}>
+        <AniLink fade to={`blog/${slug}`}>
+          <Img fluid={image.fluid} alt={image.title} />
+        </AniLink>
+        <div className="card-body">
+          <AniLink fade to={`blog/${slug}`}>
+            <h6 className="card-title font-weight-bold">{title}</h6>
+          </AniLink>
+          <small className="text-muted">
+            <span className="time">{read} minute </span> |
+            <span className="date"> {date}</span>
+          </small>
+          <p className="card-text">{documentToReactComponents(content.json)}</p>
+          <AniLink fade to={`blog/${slug}`}>
+            <button className="btn btn-danger px-4">Citeste</button>
+          </AniLink>
+        </div>
       </div>
-      <div className="card-footer text-muted d-flex justify-content-between bg-transparent border-top-0"></div>
-    </div>
+    </Fade>
   )
 }
 

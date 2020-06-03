@@ -46,7 +46,7 @@ const Accordion = ({ title, content }) => {
         >
           <div
             dangerouslySetInnerHTML={{ __html: `${content}` }}
-            className="p-3 p-sm-5"
+            className="p-3 p-sm-4"
           />
         </div>
       </div>

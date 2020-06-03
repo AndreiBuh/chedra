@@ -12,6 +12,7 @@ export const query = graphql`
   {
     faq: allContentfulFaq {
       nodes {
+        feature
         content {
           content
         }

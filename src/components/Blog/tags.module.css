@@ -1,0 +1,23 @@
+.title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 27px;
+    line-height: 1;
+}
+
+.link {
+    padding: 7px 9px;
+    margin: 0 3px 9px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px !important;
+    line-height: 1;
+    transform: skew(-10deg);
+    background: linear-gradient(to top, var(--primaryColor) 0%, var(--primaryColor) 69%, var(--primaryColor) 100%);
+    font-weight: 400;
+    border-image-slice: 1;
+}
+
+.link:hover {
+    color: white;
+}

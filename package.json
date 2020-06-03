@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@contentful/gatsby-transformer-contentful-richtext": "^13.1.0",
+    "@contentful/rich-text-react-renderer": "^13.4.0",
     "babel-plugin-styled-components": "^1.10.7",
     "dotenv": "^8.2.0",
     "gatsby": "^2.21.0",
@@ -32,6 +33,7 @@
     "gatsby-plugin-transition-link": "^1.18.0",
     "gatsby-source-contentful": "^2.3.3",
     "gatsby-source-filesystem": "^2.3.1",
+    "gatsby-transformer-remark": "^2.8.14",
     "gatsby-transformer-sharp": "^2.5.2",
     "gsap": "^3.2.6",
     "node-sass": "^4.14.0",
