@@ -204,3 +204,36 @@ Sidebar title */
     min-height: 70vh;
   }
 }
+
+
+
+/* React Tabs */
+.react-tabs__tab-list {
+  display: flex;
+  margin: 0 0 10px;
+  padding: 0;
+  flex-direction: column;
+}
+.react-tabs__tab {
+  display: inline-block;
+  position: relative;
+  list-style: none;
+  padding: 15px 15px;
+  cursor: pointer;
+  border-left: 3px solid var(--mainGrey);
+
+}
+.react-tabs__tab--selected {
+  background: #fff;
+  color: black;
+  border-left: 3px solid var(--primaryColor);
+}
+
+
+
+.react-tabs__tab-panel {
+  display: none;
+}
+.react-tabs__tab-panel--selected {
+  display: block;
+}

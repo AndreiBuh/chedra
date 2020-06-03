@@ -4,6 +4,7 @@ import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
 import SEO from "../components/SEO"
 import Layout from "../components/Layout"
+import History from "../components/History/History"
 
 const istorie = ({ pageContext, location }) => {
   const {
@@ -19,9 +20,9 @@ const istorie = ({ pageContext, location }) => {
         crumbLabel={customCrumbLabel}
         crumbSeparator=" > "
       />
-      <p>
-        istorie page <Link to="/">Home page</Link>
-      </p>
+      <div className="container">
+        <History />
+      </div>
     </Layout>
   )
 }
