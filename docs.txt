@@ -257,3 +257,34 @@ require("dotenv").config({
 
 
 =========================30. Spinner ==========================
+
+
+=========================31.Tabs===============================
+
+Progress.js
+
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
+
+<Tabs>
+      <div className="row">
+        <div className="col-sm-4">
+          <TabList>
+            {years.map((item, index) => {
+              return <Tab>{item.year}</Tab>
+            })}
+          </TabList>
+        </div>
+        <div className="col-sm-8">
+          {history.map((item, index) => {
+            return (
+              <Zoom>
+                <TabPanel>
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                </TabPanel>
+              </Zoom>
+            )
+          })}
+        </div>
+      </div>
+      </Tabs>

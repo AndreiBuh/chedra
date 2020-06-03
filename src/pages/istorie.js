@@ -20,7 +20,7 @@ const istorie = ({ pageContext, location }) => {
         crumbLabel={customCrumbLabel}
         crumbSeparator=" > "
       />
-      <div className="container">
+      <div className="container p-5">
         <History />
       </div>
     </Layout>

@@ -1,0 +1,13 @@
+.tabs {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline {
+        display: none;
+    }
+
+    .tabs {
+        display: block;
+    }
+}
