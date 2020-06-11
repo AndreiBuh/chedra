@@ -141,18 +141,7 @@ main {
   padding: 20px 30px 80px 40px;
 }
 
-/* Accordion global css */
 
-.active {
-  background: #ccc;
-}
-.icon {
-  transition: transform .6s ease;
-}
-.rotate {
-  transform: rotate(90deg);
-}
-/* Accordion end */
 
 .svg-image {
   max-width: 60px;
@@ -249,6 +238,7 @@ Sidebar title */
 }
 
 
+/* End React Tabs */
 
 
 
@@ -398,3 +388,20 @@ Sidebar title */
 }
 
 /* End History */
+
+/* Accordion */
+
+.content {
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
+  transition: all 0.4s ease;
+  overflow-x: hidden;
+}
+
+.open ~ .content {
+  max-height: 1000px !important;
+  opacity: 1 !important;
+}
+
+/* End Accordion */

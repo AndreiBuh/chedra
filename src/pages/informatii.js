@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
@@ -19,18 +19,34 @@ export const query = graphql`
         }
         id
         title
+        open
       }
     }
   }
 `
 
-const info = ({ data, pageContext, location }) => {
+const Info = ({ data, pageContext, location }) => {
   const {
     faq: { nodes },
   } = data
   const {
     breadcrumb: { crumbs },
   } = pageContext
+
+  const [faqs, setFaqs] = useState(nodes)
+
+  const toggleCollapseItem = id => {
+    setFaqs(
+      faqs.map(item => {
+        if (item.id === id) {
+          item.open = !item.open
+        } else {
+          item.open = false
+        }
+        return item
+      })
+    )
+  }
 
   const customCrumbLabel = location.pathname.replace("/", "")
   return (
@@ -44,19 +60,19 @@ const info = ({ data, pageContext, location }) => {
       <section className="container p-4 p-sm-5">
         <Title title="Informatii" subtitle="utile" titleColor="title-black" />
         <h1 className={`${styles.heading} mt-5`}>Întrebări generale</h1>
-        {nodes.map((item, index) => {
+        {faqs.map((item, index) => {
           return (
             <Accordion
-              title={item.title}
+              item={item}
               key={item.id}
-              content={item.content.content}
+              index={index}
+              toggleCollapseItem={toggleCollapseItem}
             />
           )
         })}
-        {/* <h1 className={styles.heading}>Despre Chedra Tax</h1> */}
       </section>
     </Layout>
   )
 }
 
-export default info
+export default Info

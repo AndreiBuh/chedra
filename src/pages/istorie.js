@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
 import SEO from "../components/SEO"

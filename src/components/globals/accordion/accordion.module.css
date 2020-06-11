@@ -1,38 +1,20 @@
-.section {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-}
-
-.toggle {
+.card {
     font-family: "Montserrat";
     background: var(--mainGrey);
     color: var(--mainBlack);
     cursor: pointer;
-    padding: 20px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     outline: none!important;
     transition: all .6s ease;
-    border: 1px solid #dedede;
     border-radius: 10px;
 }
-
-.toggle:hover {
+.card:hover {
     background: #ccc;
 }
 
 .title {
-    font-family: "Montserrat";
-    font-weight: 700;
-    font-size: 16px;
-    margin-bottom: 0;
-}
-
-
-.content {
-    background: var(--mainWhite);
-    overflow: hidden;
-    transition: max-height .6s ease;
+    width: 90%
 }

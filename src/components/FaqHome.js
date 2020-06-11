@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Title from "./Title"
@@ -24,15 +24,32 @@ const FaqHome = () => {
   const {
     questions: { nodes },
   } = useStaticQuery(getQuestions)
+
+  const [faqs, setFaqs] = useState(nodes)
+
+  const toggleCollapseItem = id => {
+    setFaqs(
+      faqs.map(item => {
+        if (item.id === id) {
+          item.open = !item.open
+        } else {
+          item.open = false
+        }
+        return item
+      })
+    )
+  }
+
   return (
     <div className={`${styles.faq} p-5`}>
       <Title title="Întrebări" subtitle="frecvente" titleColor="title-black" />
-      {nodes.map(question => {
+      {nodes.map((item, index) => {
         return (
           <Accordion
-            title={question.title}
-            key={question.id}
-            content={question.content.content}
+            item={item}
+            key={item.id}
+            index={index}
+            toggleCollapseItem={toggleCollapseItem}
           />
         )
       })}
