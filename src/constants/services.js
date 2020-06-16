@@ -7,7 +7,7 @@ export default [
     icon: car,
     title: "ITP",
     text:
-      "Echipa Chedra Tax efectueaza ITP-uri pentru toate marcile de masini si autovehicule utilitare cu un tonaj de maximum 3,5 tone",
+      "Echipa Chedra Tax efectueaza ITP-uri pentru toate marcile de vehicule si autovehicule.",
   },
   {
     icon: transport,

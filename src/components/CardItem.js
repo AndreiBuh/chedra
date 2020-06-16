@@ -40,7 +40,7 @@ const CardItem = ({ location }) => {
               </li>
             </ul>
             <p className={styles.card__paragraph}>{location.description}</p>
-            <Link fade to={location.slug}>
+            <Link to={location.slug}>
               <div style={{ width: "100%", textAlign: "center" }}>
                 <button className="btn btn-danger px-3">Detalii</button>
               </div>

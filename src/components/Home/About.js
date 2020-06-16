@@ -9,7 +9,7 @@ import styles from "../../css/about.module.css"
 
 const getAboutImage = graphql`
   {
-    aboutImage: file(relativePath: { eq: "about.jpg" }) {
+    aboutImage: file(relativePath: { eq: "about.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -26,20 +26,26 @@ const About = () => {
       <Title title="Despre" subtitle="noi" titleColor="title-black" />
       <div className="container">
         <div className="row">
-          <article className="col-sm-4 p-3">
+          <article className="col-sm-3 p-3">
             <Img fluid={aboutImage.childImageSharp.fluid} alt="company image" />
           </article>
-          <article className="col-sm-8 p-3">
+          <article className="col-sm-9 p-3 p-sm-5">
             <p>
-              Am inceput afacerea in 2005, si de atunci crestem si ne
-              perfectionam in fiecare an. Experienta acumulata ne face siguri ca
-              putem depasi orice impediment, ca nu exista problema careia sa nu
-              ii putem gasi o rezolvare.
+              Am inceput afacerea in 2007, si de atunci crestem si ne
+              perfectionam in fiecare an.
+            </p>
+            <p>
+              {" "}
+              Experienta acumulata ne face siguri ca putem depasi orice
+              impediment, ca nu exista problema careia sa nu ii putem gasi o
+              rezolvare.
             </p>
 
             <p>
               Avem o echipa formata din oameni responsabili, profesionisti,
               capabili sa raspunda celor mai inalte standarde si exigente.
+            </p>
+            <p>
               Printre ei vei regasi ingineri, tehnicieni si maistri auto, cu
               multa experienta si foarte bine pregatiti pentru a se adapta la
               orice cerinta.
@@ -49,8 +55,9 @@ const About = () => {
               pentru toata gama de autovehicule inmatriculate in Romania. Suntem
               siguri ca vei fi multumit de serviciile noastre!
             </p>
+
             <p>
-              <strong>Chelba Dragos</strong> - Fondator{" "}
+              <strong>Chelba Aurel</strong> - Fondator{" "}
               <Link to="/">Chedra Tax</Link>
             </p>
           </article>

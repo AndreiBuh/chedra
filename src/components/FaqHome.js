@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import Title from "./Title"
 import Accordion from "../components/globals/accordion/Accordion"
@@ -53,6 +54,11 @@ const FaqHome = () => {
           />
         )
       })}
+      <Link to="/informatii">
+        <div className="w-50 mx-auto mt-4 text-center">
+          <button className="btn btn-danger btn-lg w-75">Mai multe</button>
+        </div>
+      </Link>
     </div>
   )
 }

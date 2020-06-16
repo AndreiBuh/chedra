@@ -288,3 +288,16 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
         </div>
       </div>
       </Tabs>
+
+
+========================  32. Verificare prealabila ITP-ului  gratuita ========================
+
+
+========================  33. Instiintare clienti cu 7 zile inainte de expirare  ======================
+
+==================34. Desktop 3 chenare cu instiintari -> slide pe mobile =======
+
+
+================35. Istorie posibilitate modificare contentful ====================
+
+===============

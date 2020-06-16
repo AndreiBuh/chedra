@@ -9,7 +9,7 @@ import styles from "../../css/count.module.css"
 
 const getCountImage = graphql`
   {
-    countImage: file(relativePath: { eq: "count.jpg" }) {
+    countImage: file(relativePath: { eq: "count.png" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
           ...GatsbyImageSharpFluid_tracedSVG

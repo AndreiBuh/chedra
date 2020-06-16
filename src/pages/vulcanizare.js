@@ -20,20 +20,21 @@ export default ({ data, pageContext, location }) => {
         crumbLabel={customCrumbLabel}
         crumbSeparator=" > "
       />
-      <StyledHero image={data.heroImage.childImageSharp.fluid}></StyledHero>
+      <h1>Vulcanizare</h1>
+      {/* <StyledHero image={data.heroImage.childImageSharp.fluid}></StyledHero> */}
     </Layout>
   )
 }
 
 //Page Query
-export const query = graphql`
-  {
-    heroImage: file(relativePath: { eq: "defaultBcg1.jpeg" }) {
-      childImageSharp {
-        fluid(quality: 90, maxWidth: 4160) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   {
+//     heroImage: file(relativePath: { eq: "defaultBcg1.jpeg" }) {
+//       childImageSharp {
+//         fluid(quality: 90, maxWidth: 4160) {
+//           ...GatsbyImageSharpFluid_withWebp
+//         }
+//       }
+//     }
+//   }
+// `
