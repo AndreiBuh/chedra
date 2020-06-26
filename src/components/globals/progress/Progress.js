@@ -1,15 +1,33 @@
 import React from "react"
-import { Zoom } from "react-awesome-reveal"
+import { Zoom, Fade } from "react-awesome-reveal"
 import { IconContext } from "react-icons"
-import { FaFlag, FaHome, FaCar, FaTools, FaCogs } from "react-icons/fa"
-import { GiCarWheel } from "react-icons/gi"
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
+import { useStaticQuery, graphql } from "gatsby"
 
 import { years, history } from "../../../constants/history"
 
 import styles from "./progress.module.css"
 
+const getHistory = graphql`
+  {
+    historyYears: allContentfulHistory(sort: { fields: year }) {
+      nodes {
+        id
+        title
+        year
+        icon
+        content {
+          childContentfulRichText {
+            html
+          }
+        }
+      }
+    }
+  }
+`
+
 const Progress = () => {
+  const { historyYears } = useStaticQuery(getHistory)
   return (
     <>
       <div className={styles.tabs}>
@@ -17,18 +35,26 @@ const Progress = () => {
           <div className="row">
             <div className="col-sm-4">
               <TabList>
-                {years.map((item, index) => {
-                  return <Tab>{item.year}</Tab>
+                {historyYears.nodes.map((item, index) => {
+                  return (
+                    <Tab>
+                      {item.year} - {item.title}
+                    </Tab>
+                  )
                 })}
               </TabList>
             </div>
             <div className="col-sm-8 mt-5">
-              {history.map((item, index) => {
+              {historyYears.nodes.map((item, index) => {
                 return (
                   <Zoom>
                     <TabPanel>
                       <h5>{item.title}</h5>
-                      <p>{item.text}</p>
+                      <p
+                        dangerouslySetInnerHTML={{
+                          __html: `${item.content.childContentfulRichText.html}`,
+                        }}
+                      />
                     </TabPanel>
                   </Zoom>
                 )
@@ -39,180 +65,44 @@ const Progress = () => {
       </div>
 
       <ul className={`${styles.timeline} timeline mb-5`}>
-        <li>
-          <div className="timeline-badge rounded-circle">
-            <IconContext.Provider
-              value={{
-                style: {
-                  color: "white",
-                  fontSize: "1.5rem",
-                  verticalAlign: "middle",
-                },
-              }}
+        {historyYears.nodes.map((history, index) => {
+          return (
+            <li
+              className={index % 2 === 0 ? "" : "timeline-inverted"}
+              key={history.id}
             >
-              <FaFlag />
-            </IconContext.Provider>
-          </div>
-          <div className="timeline-sep-title">2007</div>
-          <div className="timeline-panel">
-            <div className="timeline-heading">
-              <h4 className="timeline-title">Infiintare Chedra Tax</h4>
-            </div>
-            <div className="timeline-body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
-        </li>
-        <li className="timeline-inverted">
-          <div className="timeline-badge rounded-circle">
-            <IconContext.Provider
-              value={{
-                style: {
-                  color: "white",
-                  fontSize: "1.5rem",
-                  verticalAlign: "middle",
-                },
-              }}
-            >
-              <FaHome />
-            </IconContext.Provider>
-          </div>
-          <div className="timeline-sep-title">2010</div>
-          <div className="timeline-panel">
-            <div className="timeline-heading">
-              <h4 className="timeline-title">Infiintare Chedra Tax Ciorani</h4>
-            </div>
-            <div className="timeline-body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div className="timeline-badge rounded-circle">
-            <IconContext.Provider
-              value={{
-                style: {
-                  color: "white",
-                  fontSize: "1.5rem",
-                  verticalAlign: "middle",
-                },
-              }}
-            >
-              <FaCar />
-            </IconContext.Provider>
-          </div>
-          <div className="timeline-sep-title">2013</div>
-          <div className="timeline-panel">
-            <div className="timeline-heading">
-              <h4 className="timeline-title">Infiintare Chedra Tax Floresti</h4>
-            </div>
-            <div className="timeline-body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
-        </li>
-        <li className="timeline-inverted">
-          <div className="timeline-badge rounded-circle">
-            <IconContext.Provider
-              value={{
-                style: {
-                  color: "white",
-                  fontSize: "1.5rem",
-                  verticalAlign: "middle",
-                },
-              }}
-            >
-              <FaTools />
-            </IconContext.Provider>
-          </div>
-          <div className="timeline-sep-title">2018</div>
-          <div className="timeline-panel">
-            <div className="timeline-heading">
-              <h4 className="timeline-title">Starting the Business</h4>
-            </div>
-            <div className="timeline-body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
-        </li>
-        <li className="timeline-rand-23">
-          <div className="timeline-badge rounded-circle">
-            <IconContext.Provider
-              value={{
-                style: {
-                  color: "white",
-                  fontSize: "1.5rem",
-                  verticalAlign: "middle",
-                },
-              }}
-            >
-              <GiCarWheel />
-            </IconContext.Provider>
-          </div>
-          <div className="timeline-sep-title">2019</div>
-          <div className="timeline-panel">
-            <div className="timeline-heading">
-              <h4 className="timeline-title">Vulcanizare</h4>
-            </div>
-            <div className="timeline-body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
-        </li>
-        <li className="timeline-inverted ">
-          <div className="timeline-badge rounded-circle">
-            <IconContext.Provider
-              value={{
-                style: {
-                  color: "white",
-                  fontSize: "1.5rem",
-                  verticalAlign: "middle",
-                },
-              }}
-            >
-              <FaCogs />
-            </IconContext.Provider>
-          </div>
-          <div className="timeline-sep-title">2020</div>
-          <div className="timeline-panel">
-            <div className="timeline-heading">
-              <h4 className="timeline-title">Prezent</h4>
-            </div>
-            <div className="timeline-body">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </div>
-          </div>
-        </li>
+              <div className="timeline-badge rounded-circle">
+                {/*  <IconContext.Provider
+                  value={{
+                    style: {
+                      color: "white",
+                      fontSize: "1.5rem",
+                      verticalAlign: "middle",
+                    },
+                  }}
+                >
+                  {history.icon}
+                </IconContext.Provider> */}
+              </div>
+
+              <div className="timeline-sep-title pt-2">{history.year}</div>
+              <div className="timeline-panel">
+                <div className="timeline-heading">
+                  <h4 className="timeline-title lines pl-5">{history.title}</h4>
+                </div>
+                <Fade cascade>
+                  <div className="timeline-body">
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: `${history.content.childContentfulRichText.html}`,
+                      }}
+                    />
+                  </div>
+                </Fade>
+              </div>
+            </li>
+          )
+        })}
       </ul>
     </>
   )
