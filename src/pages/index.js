@@ -16,7 +16,6 @@ import Newsletter from "../components/globals/newsletter/Newsletter"
 import Faq from "../components/Home/Faq"
 import SEO from "../components/SEO"
 import FaqHome from "../components/FaqHome"
-import Slider from "../components/globals/carousel/Slider"
 
 export default ({ data }) => (
   <Layout>
@@ -24,10 +23,9 @@ export default ({ data }) => (
       title="Acasa"
       description="pagina principala Chedra Tax ITP inspectie tehnica periodica Ploiesti"
     />
-    {/* <StyledHero home="true" image={data.heroImage.childImageSharp.fluid}>
+    <StyledHero home="true" image={data.heroImage.childImageSharp.fluid}>
       <HeroMask />
-</StyledHero> */}
-    <Slider />
+    </StyledHero>
     <Services />
     <About />
     <Steps />
