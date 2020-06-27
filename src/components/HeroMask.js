@@ -5,7 +5,7 @@ import styles from "../css/hero-mask.module.css"
 
 const HeroMask = ({ children }) => {
   return (
-    <div className={`${styles.mask} p-5 text-center m-3 pattern-background`}>
+    <div className={`${styles.mask} p-4 text-center pattern-background`}>
       <Zoom cascade>{children}</Zoom>
     </div>
   )
