@@ -42,13 +42,15 @@ const About = () => {
             </p>
 
             <p>
-              Avem o echipa formata din oameni responsabili, profesionisti,
-              capabili sa raspunda celor mai inalte standarde si exigente.
+              Misiunea stației noastre 𝙄𝙏𝙋 este să venim în întâmpinarea
+              nevoilor dumneavoastră prin servicii de calitate superioară,
+              consultanță și asistență tehnică la un grad cât mai înalt de
+              profesionalism.
             </p>
             <p>
-              Printre ei vei regasi ingineri, tehnicieni si maistri auto, cu
-              multa experienta si foarte bine pregatiti pentru a se adapta la
-              orice cerinta.
+              nspecția Tehnică Periodică (𝑰.𝑻.𝑷.) se efectuează de către
+              specialiștii noștri, cu echipamente dedicate, performante și care
+              permit efectuarea operațiilor prevăzute de legislație.
             </p>
             <p>
               Statia noastra de inspectie tehnica presteaza acesta activitate

@@ -99,7 +99,7 @@ main {
 
 .lines {
   position: relative;
-  padding-left: 30px;
+  padding-left: 40px;
 }
 .lines:before {
   content: "";
@@ -396,5 +396,3 @@ Sidebar title */
   max-height: 1000px !important;
   opacity: 1 !important;
 }
-
-/* End Accordion */
