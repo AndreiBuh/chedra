@@ -1,0 +1,13 @@
+.legend-carousel {
+    display: none
+}
+
+
+@media screen and (max-width: 768px) {
+    .mask {
+        display: none!important;
+    }
+    .legend-carousel {
+        display: block
+    }
+}

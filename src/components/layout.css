@@ -99,7 +99,7 @@ main {
 
 .lines {
   position: relative;
-  padding-left: 30px;
+  padding-left: 40px;
 }
 .lines:before {
   content: "";
@@ -398,3 +398,16 @@ Sidebar title */
 }
 
 /* End Accordion */
+
+.carousel .slide .legend {
+  background: transparent!important;
+  bottom: 50%!important;
+  left: 50%!important;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel .slide .legend {
+    bottom: 0!important;
+    left: 50%!important;
+  }
+}

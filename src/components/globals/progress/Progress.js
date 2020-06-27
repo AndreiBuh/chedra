@@ -49,7 +49,7 @@ const Progress = () => {
                 return (
                   <Zoom>
                     <TabPanel>
-                      <h5>{item.title}</h5>
+                      <h5 className="lines">{item.title}</h5>
                       <p
                         dangerouslySetInnerHTML={{
                           __html: `${item.content.childContentfulRichText.html}`,
